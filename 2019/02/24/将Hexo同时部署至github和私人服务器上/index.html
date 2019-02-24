@@ -96,17 +96,19 @@
 
 
 
-  <meta name="description" content="新建用户useradd hexogitpasswd hexogit 切换至该用户：1su git // 这步很重要，不切换用户后面会很麻烦 项目规划创建以下目录：  用于接收代码推送的git裸库  /home/hexogit/repos/blog.git/  真正的站点目录  /home/hexogit/projects/blog/ 创建hooks1234cd /home/hexogit/repo">
+  <meta name="description" content="Github page虽好，但是国内访问速度属实是慢，正好手头有台腾讯云服务器，折腾一下将博客部署上去后访问速度略有提升。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将Hexo同时部署至github和私人服务器上">
 <meta property="og:url" content="http://localhost:4000/2019/02/24/将Hexo同时部署至github和私人服务器上/index.html">
 <meta property="og:site_name" content="笑忘书的博客">
-<meta property="og:description" content="新建用户useradd hexogitpasswd hexogit 切换至该用户：1su git // 这步很重要，不切换用户后面会很麻烦 项目规划创建以下目录：  用于接收代码推送的git裸库  /home/hexogit/repos/blog.git/  真正的站点目录  /home/hexogit/projects/blog/ 创建hooks1234cd /home/hexogit/repo">
+<meta property="og:description" content="Github page虽好，但是国内访问速度属实是慢，正好手头有台腾讯云服务器，折腾一下将博客部署上去后访问速度略有提升。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-24T08:40:51.153Z">
+<meta property="og:image" content="http://localhost:4000/2019/02/24/将Hexo同时部署至github和私人服务器上/20190224062752033.png">
+<meta property="og:updated_time" content="2019-02-24T10:50:47.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将Hexo同时部署至github和私人服务器上">
-<meta name="twitter:description" content="新建用户useradd hexogitpasswd hexogit 切换至该用户：1su git // 这步很重要，不切换用户后面会很麻烦 项目规划创建以下目录：  用于接收代码推送的git裸库  /home/hexogit/repos/blog.git/  真正的站点目录  /home/hexogit/projects/blog/ 创建hooks1234cd /home/hexogit/repo">
+<meta name="twitter:description" content="Github page虽好，但是国内访问速度属实是慢，正好手头有台腾讯云服务器，折腾一下将博客部署上去后访问速度略有提升。">
+<meta name="twitter:image" content="http://localhost:4000/2019/02/24/将Hexo同时部署至github和私人服务器上/20190224062752033.png">
 
 
 
@@ -369,7 +371,7 @@
                 
               
 
-              <time title="创建时间：2019-02-24 15:57:59 / 修改时间：16:40:51" itemprop="dateCreated datePublished" datetime="2019-02-24T15:57:59+08:00">2019-02-24</time>
+              <time title="创建时间：2019-02-24 15:57:59 / 修改时间：18:50:47" itemprop="dateCreated datePublished" datetime="2019-02-24T15:57:59+08:00">2019-02-24</time>
             
 
             
@@ -408,7 +410,11 @@
       
 
       
-        <h2 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h2><p><code>useradd hexogit</code><br><code>passwd hexogit</code></p>
+        <p><img src="/2019/02/24/将Hexo同时部署至github和私人服务器上/20190224062752033.png" alt></p>
+<p>Github page虽好，但是国内访问速度属实是慢，正好手头有台腾讯云服务器，折腾一下将博客部署上去后访问速度略有提升。</p>
+<a id="more"></a>
+<h2 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h2><p>登陆云服务器，创建一个新用户：</p>
+<p><code>useradd hexogit</code><br><code>passwd hexogit</code></p>
 <p>切换至该用户：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su git // 这步很重要，不切换用户后面会很麻烦</span><br></pre></td></tr></table></figure></p>
 <h2 id="项目规划"><a href="#项目规划" class="headerlink" title="项目规划"></a>项目规划</h2><p>创建以下目录：</p>
 <ul>
@@ -419,15 +425,26 @@
 <li>真正的站点目录</li>
 </ul>
 <p><code>/home/hexogit/projects/blog/</code></p>
-<h2 id="创建hooks"><a href="#创建hooks" class="headerlink" title="创建hooks"></a>创建hooks</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/hexogit/repos</span><br><span class="line">git init --bare blog.git // 创建一个裸露的仓库</span><br><span class="line">cd blog.git/hooks</span><br><span class="line">vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）</span><br></pre></td></tr></table></figure>
-<p>此时文件为：/home/hexogit/repos/blog.git/hooks/post-receive</p>
-<p>往该文件中写入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">git --work-tree=/home/hexogit/projects/blog --git-dir=/home/hexogit/repos/blog.git checkout -f</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hexogit:hexogit /home/hexogit/repos/blog.git</span><br></pre></td></tr></table></figure>
+<h2 id="服务器端git仓库"><a href="#服务器端git仓库" class="headerlink" title="服务器端git仓库"></a>服务器端git仓库</h2><h3 id="创建裸库"><a href="#创建裸库" class="headerlink" title="创建裸库"></a>创建裸库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/hexogit/repos</span><br><span class="line">git init --bare blog.git // 创建一个裸露的仓库</span><br></pre></td></tr></table></figure>
+<h3 id="设置hooks"><a href="#设置hooks" class="headerlink" title="设置hooks"></a>设置hooks</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog.git/hooks</span><br><span class="line">vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）</span><br></pre></td></tr></table></figure>
+<p>往该文件中写入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /home/hexogit/repos/blog.git/hooks/post-receive</span></span><br><span class="line">git --work-tree=/home/hexogit/projects/blog --git-dir=/home/hexogit/repos/blog.git checkout -f</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hexogit:hexogit /home/hexogit/repos/blog.git</span><br></pre></td></tr></table></figure>
 <h2 id="使用ssh登陆服务器git"><a href="#使用ssh登陆服务器git" class="headerlink" title="使用ssh登陆服务器git"></a>使用ssh登陆服务器git</h2><h3 id="登陆服务器"><a href="#登陆服务器" class="headerlink" title="登陆服务器"></a>登陆服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ su git                  </span><br><span class="line">$ cd ~              </span><br><span class="line">$ mkdir .ssh &amp;&amp; chmod 700 .ssh                  </span><br><span class="line">$ touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <h3 id="回到本地"><a href="#回到本地" class="headerlink" title="回到本地"></a>回到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh                  </span><br><span class="line">$ ssh-keygen -t RSA -b 2048 -C &quot;Local Developer&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="上传公钥"><a href="#上传公钥" class="headerlink" title="上传公钥"></a>上传公钥</h3><p>我们需要把公钥中的内容添加到服务器上 hexogit 用户的 ~/.ssh/authorized_keys 中。</p>
 <h3 id="测试登陆"><a href="#测试登陆" class="headerlink" title="测试登陆"></a>测试登陆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i ~/.ssh/hexogit hexogit@server_ip</span><br></pre></td></tr></table></figure>
 <p>通常是没问题的，有问题自寻解决，不赘述。</p>
+<h2 id="本地hexo设置"><a href="#本地hexo设置" class="headerlink" title="本地hexo设置"></a>本地hexo设置</h2><p>同时使用多个 deploy，type 需要在前面加”-“</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: https://github.com/ChenHanZhang/ChenHanZhang.github.io.git</span><br><span class="line">    branch: master</span><br><span class="line">  - type: git</span><br><span class="line">    repo: hexogit@123.206.84.86:/home/hexogit/repos/blog.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>这样每次执行<code>hexo d</code>后，将会同时向两个git仓库推送。</p>
+<h2 id="其它设置"><a href="#其它设置" class="headerlink" title="其它设置"></a>其它设置</h2><p>前面介绍了如何自己架设一个 git 服务器并建立一个名为 git 的用户来进行所有的 git 操作：<br>但是我们会发现，git 用户是可以通过 ssh 进行远程连接我们的服务器的，这将有一定的安全隐患。下面的文章介绍如何限制 git 用户，禁止其使用 ssh 登陆进行操作。</p>
+<ul>
+<li><a href="https://blog.sbot.io/articles/14" target="_blank" rel="noopener">Git Server - 限制 Git 用户使用 SSH 登陆操作</a></li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a href="https://hunfan.top/2018/07/14/hexo%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAdeploy/" target="_blank" rel="noopener">hexo 配置使用多个 deploy</a></li>
+<li><a href="https://blog.sbot.io/articles/13" target="_blank" rel="noopener">Linux 环境下如何搭建 Git 服务器（Git Server）</a></li>
+</ul>
 
       
     </div>
@@ -615,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建用户"><span class="nav-number">1.</span> <span class="nav-text">新建用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目规划"><span class="nav-number">2.</span> <span class="nav-text">项目规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建hooks"><span class="nav-number">3.</span> <span class="nav-text">创建hooks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改权限"><span class="nav-number">4.</span> <span class="nav-text">修改权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ssh登陆服务器git"><span class="nav-number">5.</span> <span class="nav-text">使用ssh登陆服务器git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登陆服务器"><span class="nav-number">5.1.</span> <span class="nav-text">登陆服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到本地"><span class="nav-number">5.2.</span> <span class="nav-text">回到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传公钥"><span class="nav-number">5.3.</span> <span class="nav-text">上传公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试登陆"><span class="nav-number">5.4.</span> <span class="nav-text">测试登陆</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建用户"><span class="nav-number">1.</span> <span class="nav-text">新建用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目规划"><span class="nav-number">2.</span> <span class="nav-text">项目规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器端git仓库"><span class="nav-number">3.</span> <span class="nav-text">服务器端git仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建裸库"><span class="nav-number">3.1.</span> <span class="nav-text">创建裸库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置hooks"><span class="nav-number">3.2.</span> <span class="nav-text">设置hooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改权限"><span class="nav-number">3.3.</span> <span class="nav-text">修改权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ssh登陆服务器git"><span class="nav-number">4.</span> <span class="nav-text">使用ssh登陆服务器git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登陆服务器"><span class="nav-number">4.1.</span> <span class="nav-text">登陆服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到本地"><span class="nav-number">4.2.</span> <span class="nav-text">回到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传公钥"><span class="nav-number">4.3.</span> <span class="nav-text">上传公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试登陆"><span class="nav-number">4.4.</span> <span class="nav-text">测试登陆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo设置"><span class="nav-number">5.</span> <span class="nav-text">本地hexo设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它设置"><span class="nav-number">6.</span> <span class="nav-text">其它设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">7.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>

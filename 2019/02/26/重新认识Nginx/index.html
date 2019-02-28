@@ -96,27 +96,32 @@
 
 
 
-  <meta name="description" content="We’re all gonna get lumps.We’re all gonna get bumps.  Nobody can predict the future but we do know one thing about it: It ain’t gonna go according to plan.">
-<meta name="keywords" content="鸡汤,英语">
+  <meta name="description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
+<meta name="keywords" content="服务器,更新中,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Getting_up,moving_forward,and_moving_on.">
-<meta property="og:url" content="http://localhost:4000/2019/02/25/Getting-up-moving-forward-and-moving-on/index.html">
+<meta property="og:title" content="重新认识Nginx">
+<meta property="og:url" content="http://localhost:4000/2019/02/26/重新认识Nginx/index.html">
 <meta property="og:site_name" content="笑忘书的博客">
-<meta property="og:description" content="We’re all gonna get lumps.We’re all gonna get bumps.  Nobody can predict the future but we do know one thing about it: It ain’t gonna go according to plan.">
+<meta property="og:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://localhost:4000/2019/02/25/Getting-up-moving-forward-and-moving-on/20190225071734373.png">
-<meta property="og:updated_time" content="2019-02-25T12:10:31.704Z">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301121239539.png">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190226101538529.png">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190228115915389.png">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190228115937440.png">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301120331971.png">
+<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301120830174.png">
+<meta property="og:updated_time" content="2019-02-28T16:12:47.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Getting_up,moving_forward,and_moving_on.">
-<meta name="twitter:description" content="We’re all gonna get lumps.We’re all gonna get bumps.  Nobody can predict the future but we do know one thing about it: It ain’t gonna go according to plan.">
-<meta name="twitter:image" content="http://localhost:4000/2019/02/25/Getting-up-moving-forward-and-moving-on/20190225071734373.png">
+<meta name="twitter:title" content="重新认识Nginx">
+<meta name="twitter:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
+<meta name="twitter:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301121239539.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://localhost:4000/2019/02/25/Getting-up-moving-forward-and-moving-on/">
+  <link rel="canonical" href="http://localhost:4000/2019/02/26/重新认识Nginx/">
 
 
 
@@ -126,7 +131,7 @@
   };
 </script>
 
-  <title>Getting_up,moving_forward,and_moving_on. | 笑忘书的博客</title>
+  <title>重新认识Nginx | 笑忘书的博客</title>
   
 
 
@@ -329,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2019/02/25/Getting-up-moving-forward-and-moving-on/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2019/02/26/重新认识Nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="笑忘书">
@@ -346,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Getting_up,moving_forward,and_moving_on.
+          <h1 class="post-title" itemprop="name headline">重新认识Nginx
 
               
             
@@ -372,12 +377,24 @@
                 
               
 
-              <time title="创建时间：2019-02-25 19:04:54 / 修改时间：20:10:31" itemprop="dateCreated datePublished" datetime="2019-02-25T19:04:54+08:00">2019-02-25</time>
+              <time title="创建时间：2019-02-26 22:02:25" itemprop="dateCreated datePublished" datetime="2019-02-26T22:02:25+08:00">2019-02-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-01 00:12:47" itemprop="dateModified" datetime="2019-03-01T00:12:47+08:00">2019-03-01</time>
               
             
           </span>
@@ -394,7 +411,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/翻译/" itemprop="url" rel="index"><span itemprop="name">翻译</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后端/" itemprop="url" rel="index"><span itemprop="name">后端</span></a></span>
 
                 
                 
@@ -429,58 +446,80 @@
       
 
       
-        <p>We’re all gonna get lumps.<br>We’re all gonna get bumps.</p>
-<p><img src="/2019/02/25/Getting-up-moving-forward-and-moving-on/20190225071734373.png" alt></p>
-<p>Nobody can predict the future but we do know one thing about it: It ain’t gonna go according to plan.</p>
+        <p>对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！</p>
+<p><img src="/2019/02/26/重新认识Nginx/20190301121239539.png" alt></p>
+<p>粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。</p>
 <a id="more"></a>
+<h2 id="目录规划"><a href="#目录规划" class="headerlink" title="目录规划"></a>目录规划</h2><ul>
+<li>先导知识</li>
+<li>网络体系结构</li>
+<li>从历史谈起</li>
+<li>Nginx的高级应用</li>
+<li>参考资料</li>
+</ul>
+<h2 id="先导知识"><a href="#先导知识" class="headerlink" title="先导知识"></a>先导知识</h2><ul>
+<li><a href="https://blog.51cto.com/12889016/2103183" target="_blank" rel="noopener">web 服务器，应用程序服务器，http 服务器的区别</a></li>
+</ul>
+<h2 id="网络体系结构"><a href="#网络体系结构" class="headerlink" title="网络体系结构"></a>网络体系结构</h2><p>先来回顾一下计算机网络体系结构，这个图很重要。</p>
+<p><img src="/2019/02/26/重新认识Nginx/20190226101538529.png" alt="网络体系结构"></p>
 <blockquote>
-<p><code>ain&#39;t</code> =&gt; <code>am not</code></p>
+<p>图片来源：腾讯云社区 [1]</p>
 </blockquote>
-<p>Yes, we’ll all have massive highs, big days, and proud moments. Color faded, postcard-streaked blurs will float and flash through our brains on our deathbeds, of wide eyes on graduation stages, father-daughter dances at weddings, and healthy baby screeches in the delivery room. And dotting those big moments will be smaller ones too: fragile hugs with Grandma on Christmas morning, two-year-olds handing you a bouquet of dandelions and saying ‘I love you’, or your boyfriend staring into your eyes and smiling while lazing in bed on Sunday morning.</p>
-<blockquote>
-<p><code>postcard-streaked</code> 模糊的明信片<br><code>streak</code> 条纹，光带，性格；一阵子，时期；留下条痕；飞奔<br><code>screech</code> 尖叫<br><code>bouquet</code> 芳香；花束<br><code>dandelion</code> 蒲公英</p>
-</blockquote>
-<p>But like I said.<br>We’re all gonna get lumps.<br>We’re all gonna get bumps.</p>
-<blockquote>
-<p><code>lumps</code> 肿块，苦头；把什么合在一块<br><code>bumps</code> 撞上，碰上</p>
-</blockquote>
-<p>It’s sad but things could happen or hurt you that you just can’t predict.</p>
-<p>Your husband might leave you, your girlfriend may cheat, your headaches might be serious, your dog could get smacked in the street. Yes, your kids might get mixed up with tough gangs or bad scenes. It’s sad but your mom could get cancer… or your dad could get mean.</p>
-<hr>
-<p>There will be times in your life you’re tossed down the well, too. There will be times you’ll cry yourself to sleep, with twists in your stomach, with holes in your heart. You may wonder if it’s all worth it and you may think that it ain’t. You may wonder if you can handle it or you may beg for restraint.</p>
-<blockquote>
-<p><code>toss down</code> 随意扔下，一饮而尽<br><code>beg</code> 乞求</p>
-</blockquote>
-<p>But when bad news washes over you and when the pain sponges and soaks in, I really hope you feel like you’ve always got two big choices:</p>
+<p>对于后端的应用开发，通常主要涉及TCP/IP中的网际层、传输层和应用层，对于这三层的每一层服务内容、相关协议和实现应该有所了解。我们需要知道，一个请求从客户端开始，送达服务器端这个过程中都经过哪些阶段？</p>
+<p>这里可以参考一下<a href="https://www.cnblogs.com/edisonchou/p/5987827.html" target="_blank" rel="noopener">《图解TCP/IP》读书笔记</a>。</p>
+<p>了解了整个通讯流程后，现在的有几个问题需要先弄清楚：</p>
 <ol>
-<li>You can swish and swirl in gloomy darkness forever, or</li>
-<li>You can grieve and face the future with newly sober eyes</li>
+<li><p>Nginx是什么？</p>
+<blockquote>
+<p>Nginx 是一款免费的、开源的、高性能的 HTTP 服务器和反向代理服务器；同时也是一个 IMAP、POP3、SMTP 代理服务器；Nginx 可以作为一个 HTTP 服务器进行网站的发布处理，另外 Nginx 也可以作为反向代理进行负载均衡的实现 [2]。</p>
+</blockquote>
+</li>
+<li><p>Nginx提供了哪一层的服务？</p>
+<blockquote>
+<p>在OSI的体系结构中，各层定义了各自的服务，那么，Nginx实现的是哪一个层的服务？<br>显而易见，按照TCP/IP的四层协议来分，Nginx处于应用层；按照OSI的七层协议来分，Nginx提供的是会话层以及表现层的服务，并且也涉及应用层。根据不同的需求，可以配置Nginx使之提供上述部分或者全部层次的功能。</p>
+</blockquote>
+</li>
+<li><p>谁负责给nginx提供服务？nginx又如何给出自己的服务？</p>
+<blockquote>
+<p>这个问题先留着。</p>
+</blockquote>
+</li>
 </ol>
-<blockquote>
-<p><code>sponge</code> 海绵<br><code>soak in</code> 沉浸于<br><code>swish</code> 嗖嗖作响，鞭打<br><code>gloomy</code> 悲观的，黑暗的，沮丧的<br><code>grieve</code> 悲伤的，使苦恼</p>
+<h2 id="从历史谈起"><a href="#从历史谈起" class="headerlink" title="从历史谈起"></a>从历史谈起</h2><p>要解释清楚Nginx到底都提供了什么服务，一两句话很难说清楚。让我们先回顾一下互联网技术的发展历程，这里可以参考<a href="http://blog.jobbole.com/45169/" target="_blank" rel="noopener">Web 开发的发展史</a>，<a href="https://www.tianmaying.com/blog/8ab3eda84daf4e54014daf68ff09000b" target="_blank" rel="noopener">Web 开发技术发展历史</a>。<br>在了解了web技术是如何一步一步地发展、互联网的技术体系怎么逐渐壮大的之后，Nginx不再仅仅是作为http服务器</p>
+<p>这里延伸一下，既然应用层的大部分服务由Nginx提供，那么我们写的后端服务在应用层上是如何配合Nginx的？<br>从上面的文章中我们可以知道，这主要有几种方式：</p>
+<ol>
+<li>静态资源访问<br><img src="/2019/02/26/重新认识Nginx/20190228115915389.png" alt><blockquote>
+<p>图片来源： 《Web 开发技术发展历史》[9]</p>
 </blockquote>
-<p>Sure, life has dealt me some blows in the couple years I’ve been writing this site and this book. There was the mind-numbing loneliness of moving to a brand new nowhere town, the broken heart of a major breakup, the searing waves of regret when a friend disappeared, and the general life pressures of starting a new job, living on my own, and trying to make new friends in a big city.</p>
-<blockquote>
-<p><code>dealt</code> 处理</p>
+</li>
+<li>动态资源cgi<br>CGI 定义了 Web 服务器与外部应用程序之间的通信接口标准，因此 Web 服务器可以通过 CGI 执行外部程序，让外部程序根据 Web 请求内容生成动态的内容。这里可以参考一下，<a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a>。<br><img src="/2019/02/26/重新认识Nginx/20190228115937440.png" alt><blockquote>
+<p>图片来源： 《Web 开发技术发展历史》[9]<br>网关协议（cgi , fastcgi 等），的作用，就是把 web 服务器抽出来，分离 “应用”。<br>因为在各个语言上，实现 cgi 或 fastcgi ，要比实现一套完整的 http 要容易得多（最重要的一点是不用关心访问的 “调度” 了）。进一步说， Python 中的 Tornado 虽然自己有实现 http ，正式环境部署的时候，也会在前端部署 nginx ，从这里也可以看到， nginx 这类 web 服务器，除了实现 http 协议，还有其它相关的功能（反向代理，负载均衡，fastcgi 支持，uwsgi 支持等）。而通过通用的网关协议，把这些层分开，各自就可以更关注自己的领域，实现更稳定，强大的服务质量 [5]。</p>
 </blockquote>
-<p>But I’m lucky because I’ve had a way out for the past two years. I’ve had a secret pill to swallow, a magic potion to swirl, and a bubbly cauldron to sip from every time I felt down or felt black or felt blue. And I hope you know that remedy and I hope you feel it, too.</p>
-<blockquote>
-<p><code>swallow</code> 吞下，咽下<br><code>potion</code> 药水，服剂</p>
+</li>
+<li>脚本语言支持<br><img src="/2019/02/26/重新认识Nginx/20190301120331971.png" alt><blockquote>
+<p>图片来源： 《Web 开发技术发展历史》[9]</p>
 </blockquote>
-<p>After all, you’re reading it right now.</p>
-<p>Yes, awesome things make my life better, people. And I hope they do the same for you.</p>
-<p>I honestly can’t go a day anymore without smiling at a couple tiny awesome things in my world. Whether it’s fixing electronics by smacking them, waking up and realizing it’s Saturday, or moving all my wet clothes from the washer to the dryer without dropping anything, these tiny things make a great big difference.</p>
-<blockquote>
-<p><code>smacking</code> 拍打</p>
-</blockquote>
-<p><strong>So come on. Come on! Are you with me? Who’s with me? I say if you’ve got a couple fist-pumps in you, if you’ve got a sneaky twinkle in your eye, if you’ve got an itchy old soul that loves smiling at strangers, dancing at weddings, and popping the hell out of bubble wrap, then come on in and join The AWESOME Movement.</strong></p>
-<blockquote>
-<p><code>sneaky</code> 鬼鬼祟祟的，暗中的<br><code>twinkle</code> 闪烁<br><code>itchy</code> 发痒<br><code>bubble</code> 泡沫，起泡</p>
-</blockquote>
-<p>Yes, it’s my sincere hope that The Book of Awesome helps those who need it to grieve, move on, and remind them the best things in life are free. For those folks, maybe it’s a ladder out of the well or a dusty flashlight beam in the darkness. For others, perhaps it’s just a little laugh on the back of the toilet, a bit of peace before bed, or a spark for debates about gasoline fumes, alarm clock strategy, or what matters most to you, you, or you.</p>
-<p>For me, I know I’ll have more dark days, and I know my friends will too, but I like thinking that snow days, steamy buffets, and the cool side of the pillow will always cheer me through to the other side.</p>
-<p>While polar ice caps melt, while health care debates rage on, while buzz saws chop down forests, while wars go on and on, I hope there’s always a special place we can click online in the darkness or flip open for a few minutes to turn off that bright light, snuggle right on up, and get comfy to chat about the sweetest parts of life.</p>
-<p>Thank you for letting me take a break to share personal stories about myself and behind The Book of Awesome this week. The comments and emails have been achingly beautiful and wet my eyes many times. I am so incredibly thankful, lucky, honored, and excited to keep going down this road with you.</p>
+</li>
+<li>反向代理服务器\API网关<br><img src="/2019/02/26/重新认识Nginx/20190301120830174.png" alt><br>作为领先的高性能、轻量级反向代理和负载均衡器解决方案，NGINX Plus 具有处理 API 流量所需的高级 HTTP 处理能力。这使得 NGINX Plus 成为构建 API 网关的理想平台。这里可以参考，<a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a> [10]。</li>
+</ol>
+<h2 id="Nginx的高级应用"><a href="#Nginx的高级应用" class="headerlink" title="Nginx的高级应用"></a>Nginx的高级应用</h2><p>这部分内容我还不是很熟悉，后面有机会实践之后再做整理。以下是部分参考资料：</p>
+<ol>
+<li><a href="https://www.cnblogs.com/wcwnina/p/8728391.html" target="_blank" rel="noopener">反向代理</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1048707" target="_blank" rel="noopener">一分钟了解四层 / 七层反向代理</a></li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>[1] <a href="https://cloud.tencent.com/developer/article/1102034" target="_blank" rel="noopener">网络体系结构</a></li>
+<li>[2] <a href="https://www.cnblogs.com/wcwnina/p/8728391.html" target="_blank" rel="noopener">Nginx 相关介绍 (Nginx 是什么？能干嘛？)</a></li>
+<li>[3] <a href="https://www.cnblogs.com/sammyliu/p/5225623.html" target="_blank" rel="noopener">理解 Linux 网络栈（1）：Linux 网络协议栈简单总结</a></li>
+<li>[4] <a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a></li>
+<li>[5] <a href="https://segmentfault.com/q/1010000013353317" target="_blank" rel="noopener">在 Web 服务区和 PHP 代码之间， mod_php5 模块和 php-cgi 的作用和位置定义是什么？</a></li>
+<li>[6] <a href="https://segmentfault.com/a/1190000008836467" target="_blank" rel="noopener">Linux 网络 - 数据包的接收过程</a></li>
+<li>[7]<a href="https://www.cnblogs.com/dirkhe/p/6060209.html" target="_blank" rel="noopener">《图解HTTP》读书笔记</a></li>
+<li>[8] <a href="http://blog.jobbole.com/45169/" target="_blank" rel="noopener">Web 开发的发展史</a></li>
+<li>[9] <a href="https://www.tianmaying.com/blog/8ab3eda84daf4e54014daf68ff09000b" target="_blank" rel="noopener">Web 开发技术发展历史</a></li>
+<li>[10] <a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a></li>
+<li><a href="https://blog.51cto.com/12889016/2103183" target="_blank" rel="noopener">web 服务器，应用程序服务器，http 服务器的区别</a></li>
+</ul>
 
       
     </div>
@@ -504,9 +543,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/鸡汤/" rel="tag"># 鸡汤</a>
+            <a href="/tags/服务器/" rel="tag"># 服务器</a>
           
-            <a href="/tags/英语/" rel="tag"># 英语</a>
+            <a href="/tags/更新中/" rel="tag"># 更新中</a>
+          
+            <a href="/tags/后端/" rel="tag"># 后端</a>
           
         </div>
       
@@ -519,8 +560,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/25/常用英语单词总结/" rel="next" title="常用英语单词总结">
-                <i class="fa fa-chevron-left"></i> 常用英语单词总结
+              <a href="/2019/02/25/Getting-up-moving-forward-and-moving-on/" rel="next" title="Getting_up,moving_forward,and_moving_on.">
+                <i class="fa fa-chevron-left"></i> Getting_up,moving_forward,and_moving_on.
               </a>
             
           </div>
@@ -528,10 +569,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/26/重新认识Nginx/" rel="prev" title="重新认识Nginx">
-                重新认识Nginx <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,8 +612,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +718,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录规划"><span class="nav-number">1.</span> <span class="nav-text">目录规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先导知识"><span class="nav-number">2.</span> <span class="nav-text">先导知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络体系结构"><span class="nav-number">3.</span> <span class="nav-text">网络体系结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从历史谈起"><span class="nav-number">4.</span> <span class="nav-text">从历史谈起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx的高级应用"><span class="nav-number">5.</span> <span class="nav-text">Nginx的高级应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

@@ -96,32 +96,33 @@
 
 
 
-  <meta name="description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
-<meta name="keywords" content="服务器,更新中,后端">
+  <meta name="description" content="atomic designWe’re not designing pages, we’re designing systems of components.—Stephen Hay  As the craft of Web design continues to evolve, we’re recognizing the need to develop thoughtful design syst">
+<meta name="keywords" content="英语,翻译">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重新认识Nginx">
-<meta property="og:url" content="http://localhost:4000/2019/02/26/重新认识Nginx/index.html">
+<meta property="og:title" content="Atomic_design">
+<meta property="og:url" content="http://localhost:4000/2019/03/02/Atomic-design/index.html">
 <meta property="og:site_name" content="笑忘书的博客">
-<meta property="og:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
+<meta property="og:description" content="atomic designWe’re not designing pages, we’re designing systems of components.—Stephen Hay  As the craft of Web design continues to evolve, we’re recognizing the need to develop thoughtful design syst">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301121239539.png">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190226101538529.png">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190228115915389.png">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190228115937440.png">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301120331971.png">
-<meta property="og:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301120830174.png">
-<meta property="og:updated_time" content="2019-02-28T16:12:47.800Z">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302013607381.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302015301591.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302062439411.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302063252364.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302064509548.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302072143624.png">
+<meta property="og:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302074006953.png">
+<meta property="og:updated_time" content="2019-03-02T12:00:22.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重新认识Nginx">
-<meta name="twitter:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
-<meta name="twitter:image" content="http://localhost:4000/2019/02/26/重新认识Nginx/20190301121239539.png">
+<meta name="twitter:title" content="Atomic_design">
+<meta name="twitter:description" content="atomic designWe’re not designing pages, we’re designing systems of components.—Stephen Hay  As the craft of Web design continues to evolve, we’re recognizing the need to develop thoughtful design syst">
+<meta name="twitter:image" content="http://localhost:4000/2019/03/02/Atomic-design/20190302013607381.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://localhost:4000/2019/02/26/重新认识Nginx/">
+  <link rel="canonical" href="http://localhost:4000/2019/03/02/Atomic-design/">
 
 
 
@@ -131,7 +132,7 @@
   };
 </script>
 
-  <title>重新认识Nginx | 笑忘书的博客</title>
+  <title>Atomic_design | 笑忘书的博客</title>
   
 
 
@@ -334,7 +335,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2019/02/26/重新认识Nginx/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2019/03/02/Atomic-design/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="笑忘书">
@@ -351,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">重新认识Nginx
+          <h1 class="post-title" itemprop="name headline">Atomic_design
 
               
             
@@ -377,24 +378,12 @@
                 
               
 
-              <time title="创建时间：2019-02-26 22:02:25" itemprop="dateCreated datePublished" datetime="2019-02-26T22:02:25+08:00">2019-02-26</time>
+              <time title="创建时间：2019-03-02 13:30:51 / 修改时间：20:00:22" itemprop="dateCreated datePublished" datetime="2019-03-02T13:30:51+08:00">2019-03-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-01 00:12:47" itemprop="dateModified" datetime="2019-03-01T00:12:47+08:00">2019-03-01</time>
               
             
           </span>
@@ -411,7 +400,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后端/" itemprop="url" rel="index"><span itemprop="name">后端</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计原则/" itemprop="url" rel="index"><span itemprop="name">设计原则</span></a></span>
 
                 
                 
@@ -446,80 +435,100 @@
       
 
       
-        <p>对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！</p>
-<p><img src="/2019/02/26/重新认识Nginx/20190301121239539.png" alt></p>
-<p>粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。</p>
+        <h2 id="atomic-design"><a href="#atomic-design" class="headerlink" title="atomic design"></a>atomic design</h2><p><strong>We’re not designing pages, we’re designing systems of components.—Stephen Hay</strong></p>
+<p><img src="/2019/03/02/Atomic-design/20190302013607381.png" alt></p>
+<p>As the craft of Web design continues to evolve, we’re recognizing the need to develop thoughtful design systems, rather than creating simple collections of web pages.</p>
 <a id="more"></a>
-<h2 id="目录规划"><a href="#目录规划" class="headerlink" title="目录规划"></a>目录规划</h2><ul>
-<li>先导知识</li>
-<li>网络体系结构</li>
-<li>从历史谈起</li>
-<li>Nginx的高级应用</li>
-<li>参考资料</li>
-</ul>
-<h2 id="先导知识"><a href="#先导知识" class="headerlink" title="先导知识"></a>先导知识</h2><ul>
-<li><a href="https://blog.51cto.com/12889016/2103183" target="_blank" rel="noopener">web 服务器，应用程序服务器，http 服务器的区别</a></li>
-</ul>
-<h2 id="网络体系结构"><a href="#网络体系结构" class="headerlink" title="网络体系结构"></a>网络体系结构</h2><p>先来回顾一下计算机网络体系结构，这个图很重要。</p>
-<p><img src="/2019/02/26/重新认识Nginx/20190226101538529.png" alt="网络体系结构"></p>
+<p>Hey there! I wrote a book called Atomic Design that dives into this topic in more detail, which you can buy in paperback and/or ebook formats.</p>
 <blockquote>
-<p>图片来源：腾讯云社区 [1]</p>
+<p>dives into: 投入，冲进，钻研</p>
 </blockquote>
-<p>对于后端的应用开发，通常主要涉及TCP/IP中的网际层、传输层和应用层，对于这三层的每一层服务内容、相关协议和实现应该有所了解。我们需要知道，一个请求从客户端开始，送达服务器端这个过程中都经过哪些阶段？</p>
-<p>这里可以参考一下<a href="https://www.cnblogs.com/edisonchou/p/5987827.html" target="_blank" rel="noopener">《图解TCP/IP》读书笔记</a>。</p>
-<p>了解了整个通讯流程后，现在的有几个问题需要先弄清楚：</p>
+<p>As the craft of Web design continues to evolve, we’re recognizing the need to develop thoughtful design systems, rather than creating simple collections of web pages.</p>
+<blockquote>
+<p>craft: 工艺，技巧；精美的制作</p>
+</blockquote>
+<p>A lot has been said about creating <a href="https://24ways.org/2012/design-systems/" target="_blank" rel="noopener">design systems</a>, and much of it focuses on establishing foundations for color, typography, grids, texture and the like. This type of thinking is certainly important, but I’m slightly less interested in these aspects of design because ultimately they are and will always be subjective. Lately I’ve been more interested in what our interfaces are comprised of and how we can construct design systems in a more methodical way.</p>
+<blockquote>
+<p>subjective: 主观的；自觉的<br>interface: 接口，界面（交界面）；连接，交流<br>comprise: 组成；包含；构成</p>
+</blockquote>
+<p>In searching for inspiration and parallels, I kept coming back to chemistry. The thought is that all matter (whether solid, liquid, gas, simple, complex, etc) is comprised of atoms. Those atomic units bond together to form molecules, which in turn combine into more complex organisms to ultimately create all matter in our universe.</p>
+<blockquote>
+<p>parallel: 相近之处；平行，平行线；相似<br>chemistry: 化学；化学过程<br>molecule: 分子，微小颗粒</p>
+</blockquote>
+<p>Similarly, interfaces are made up of smaller components. This means we can break entire interfaces down into fundamental building blocks and work up from there. That’s the basic gist of atomic design.</p>
+<blockquote>
+<p>work up: 逐步建立、发展，组成<br>gist: 要点；主旨依据</p>
+</blockquote>
+<p><img src="/2019/03/02/Atomic-design/20190302015301591.png" alt></p>
+<blockquote>
+<p>Josh Duck’s <a href="http://smm.zoomquiet.top/data/20110511083224/index.html" target="_blank" rel="noopener">HTML Periodic Table</a> gives a great breakdown of web designers’ atomic elements.</p>
+</blockquote>
+<h2 id="what-is-atomic-design"><a href="#what-is-atomic-design" class="headerlink" title="what is atomic design"></a>what is atomic design</h2><p>Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:</p>
+<blockquote>
+<p>methodology: 方法论</p>
+</blockquote>
 <ol>
-<li><p>Nginx是什么？</p>
-<blockquote>
-<p>Nginx 是一款免费的、开源的、高性能的 HTTP 服务器和反向代理服务器；同时也是一个 IMAP、POP3、SMTP 代理服务器；Nginx 可以作为一个 HTTP 服务器进行网站的发布处理，另外 Nginx 也可以作为反向代理进行负载均衡的实现 [2]。</p>
-</blockquote>
-</li>
-<li><p>Nginx提供了哪一层的服务？</p>
-<blockquote>
-<p>在OSI的体系结构中，各层定义了各自的服务，那么，Nginx实现的是哪一个层的服务？<br>显而易见，按照TCP/IP的四层协议来分，Nginx处于应用层；按照OSI的七层协议来分，Nginx提供的是会话层以及表现层的服务，并且也涉及应用层。根据不同的需求，可以配置Nginx使之提供上述部分或者全部层次的功能。</p>
-</blockquote>
-</li>
-<li><p>谁负责给nginx提供服务？nginx又如何给出自己的服务？</p>
-<blockquote>
-<p>这个问题先留着。</p>
-</blockquote>
-</li>
+<li>Atoms</li>
+<li>Molecules</li>
+<li>Organisms</li>
+<li>Templates</li>
+<li>Pages</li>
 </ol>
-<h2 id="从历史谈起"><a href="#从历史谈起" class="headerlink" title="从历史谈起"></a>从历史谈起</h2><p>要解释清楚Nginx到底都提供了什么服务，一两句话很难说清楚。让我们先回顾一下互联网技术的发展历程，这里可以参考<a href="http://blog.jobbole.com/45169/" target="_blank" rel="noopener">Web 开发的发展史</a>，<a href="https://www.tianmaying.com/blog/8ab3eda84daf4e54014daf68ff09000b" target="_blank" rel="noopener">Web 开发技术发展历史</a>。<br>在了解了web技术是如何一步一步地发展、互联网的技术体系怎么逐渐壮大的之后，Nginx不再仅仅是作为http服务器</p>
-<p>这里延伸一下，既然应用层的大部分服务由Nginx提供，那么我们写的后端服务在应用层上是如何配合Nginx的？<br>从上面的文章中我们可以知道，这主要有几种方式：</p>
-<ol>
-<li>静态资源访问<br><img src="/2019/02/26/重新认识Nginx/20190228115915389.png" alt><blockquote>
-<p>图片来源： 《Web 开发技术发展历史》[9]</p>
+<p><img src="/2019/03/02/Atomic-design/20190302062439411.png" alt></p>
+<p>Let’s explore each stage in more detail.</p>
+<blockquote>
+<p>stage: 阶段</p>
 </blockquote>
-</li>
-<li>动态资源cgi<br>CGI 定义了 Web 服务器与外部应用程序之间的通信接口标准，因此 Web 服务器可以通过 CGI 执行外部程序，让外部程序根据 Web 请求内容生成动态的内容。这里可以参考一下，<a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a>。<br><img src="/2019/02/26/重新认识Nginx/20190228115937440.png" alt><blockquote>
-<p>图片来源： 《Web 开发技术发展历史》[9]<br>网关协议（cgi , fastcgi 等），的作用，就是把 web 服务器抽出来，分离 “应用”。<br>因为在各个语言上，实现 cgi 或 fastcgi ，要比实现一套完整的 http 要容易得多（最重要的一点是不用关心访问的 “调度” 了）。进一步说， Python 中的 Tornado 虽然自己有实现 http ，正式环境部署的时候，也会在前端部署 nginx ，从这里也可以看到， nginx 这类 web 服务器，除了实现 http 协议，还有其它相关的功能（反向代理，负载均衡，fastcgi 支持，uwsgi 支持等）。而通过通用的网关协议，把这些层分开，各自就可以更关注自己的领域，实现更稳定，强大的服务质量 [5]。</p>
+<h3 id="atoms"><a href="#atoms" class="headerlink" title="atoms"></a>atoms</h3><p>Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.</p>
+<p>Atoms can also include more abstract elements like color palettes, fonts and even more invisible aspects of an interface like animations.</p>
+<blockquote>
+<p>palette: 通道</p>
 </blockquote>
-</li>
-<li>脚本语言支持<br><img src="/2019/02/26/重新认识Nginx/20190301120331971.png" alt><blockquote>
-<p>图片来源： 《Web 开发技术发展历史》[9]</p>
+<p>Like atoms in nature they’re fairly abstract and often not terribly useful on their own. However, they’re good as a reference in the context of a pattern library as you can see all your global styles laid out at a glance.</p>
+<blockquote>
+<p>terribly: 非常地；极度地；可怕的</p>
 </blockquote>
-</li>
-<li>反向代理服务器\API网关<br><img src="/2019/02/26/重新认识Nginx/20190301120830174.png" alt><br>作为领先的高性能、轻量级反向代理和负载均衡器解决方案，NGINX Plus 具有处理 API 流量所需的高级 HTTP 处理能力。这使得 NGINX Plus 成为构建 API 网关的理想平台。这里可以参考，<a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a> [10]。</li>
-</ol>
-<h2 id="Nginx的高级应用"><a href="#Nginx的高级应用" class="headerlink" title="Nginx的高级应用"></a>Nginx的高级应用</h2><p>这部分内容我还不是很熟悉，后面有机会实践之后再做整理。以下是部分参考资料：</p>
-<ol>
-<li><a href="https://www.cnblogs.com/wcwnina/p/8728391.html" target="_blank" rel="noopener">反向代理</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1048707" target="_blank" rel="noopener">一分钟了解四层 / 七层反向代理</a></li>
-</ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>[1] <a href="https://cloud.tencent.com/developer/article/1102034" target="_blank" rel="noopener">网络体系结构</a></li>
-<li>[2] <a href="https://www.cnblogs.com/wcwnina/p/8728391.html" target="_blank" rel="noopener">Nginx 相关介绍 (Nginx 是什么？能干嘛？)</a></li>
-<li>[3] <a href="https://www.cnblogs.com/sammyliu/p/5225623.html" target="_blank" rel="noopener">理解 Linux 网络栈（1）：Linux 网络协议栈简单总结</a></li>
-<li>[4] <a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a></li>
-<li>[5] <a href="https://segmentfault.com/q/1010000013353317" target="_blank" rel="noopener">在 Web 服务区和 PHP 代码之间， mod_php5 模块和 php-cgi 的作用和位置定义是什么？</a></li>
-<li>[6] <a href="https://segmentfault.com/a/1190000008836467" target="_blank" rel="noopener">Linux 网络 - 数据包的接收过程</a></li>
-<li>[7]<a href="https://www.cnblogs.com/dirkhe/p/6060209.html" target="_blank" rel="noopener">《图解HTTP》读书笔记</a></li>
-<li>[8] <a href="http://blog.jobbole.com/45169/" target="_blank" rel="noopener">Web 开发的发展史</a></li>
-<li>[9] <a href="https://www.tianmaying.com/blog/8ab3eda84daf4e54014daf68ff09000b" target="_blank" rel="noopener">Web 开发技术发展历史</a></li>
-<li>[10] <a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a></li>
-<li><a href="https://blog.51cto.com/12889016/2103183" target="_blank" rel="noopener">web 服务器，应用程序服务器，http 服务器的区别</a></li>
-</ul>
+<h3 id="molecules"><a href="#molecules" class="headerlink" title="molecules"></a>molecules</h3><p>Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.</p>
+<blockquote>
+<p>molecule: 分子；微小颗粒<br>tangible: 有形的；确切的；可触摸的<br>compound: 复合物；合成的，混合；恶化，加重</p>
+</blockquote>
+<p>For example, a form label, input or button aren’t too useful by themselves, but combine them together as a form and now they can actually do something together.</p>
+<p><img src="/2019/03/02/Atomic-design/20190302063252364.png" alt></p>
+<p><strong>Building up to molecules from atoms encourages a “do one thing and do it well” mentality.</strong> While molecules can be complex, as a rule of thumb they are relatively simple combinations of atoms built for reuse.</p>
+<blockquote>
+<p>thumb: 翻阅；以拇指拨弄</p>
+</blockquote>
+<h3 id="organisms"><a href="#organisms" class="headerlink" title="organisms"></a>organisms</h3><p>Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.</p>
+<p><img src="/2019/03/02/Atomic-design/20190302064509548.png" alt></p>
+<p>We’re starting to get increasingly concrete. A client might not be terribly interested in the molecules of a design system, but with organisms we can see the final interface beginning to take shape. Dan Mall (who I’m working with on several projects) uses <a href="http://v3.danielmall.com/articles/rif-element-collages/" target="_blank" rel="noopener">element collages</a>, which articulate ideas for a few key organisms to facilitate client conversations and shape the visual direction (all without having to construct full comps).</p>
+<blockquote>
+<p>concrete: 混凝土；具体的，实在的，有形的<br>articulate: 发音；清晰地表达；用关节连接<br>facilitate: 促进，帮助，使便利</p>
+</blockquote>
+<p>Organisms can consist of similar and/or different molecule types. For example, a masthead organism might consist of diverse components like a logo, primary navigation, search form, and list of social media channels. But a “product grid” organism might consist of the same molecule (possibly containing a product image, product title and price) repeated over and over again.</p>
+<blockquote>
+<p>masthead: 报头，顶栏</p>
+</blockquote>
+<p><strong>Building up from molecules to organisms encourages creating standalone, portable, reusable components.</strong></p>
+<h3 id="templates"><a href="#templates" class="headerlink" title="templates"></a>templates</h3><p>At the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and our final output. Templates consist mostly of groups of organisms stitched together to form pages. <strong>It’s here where we start to see the design coming together and start seeing things like layout in action.</strong></p>
+<blockquote>
+<p>analogy: 相似；类比<br>stitch: 针脚；缝合</p>
+</blockquote>
+<p><img src="/2019/03/02/Atomic-design/20190302072143624.png" alt></p>
+<p>Templates are very concrete and provide context to all these relatively abstract molecules and organisms. Templates are also where clients start seeing the final design in place. In my experience working with this methodology, <strong>templates begin their life as HTML wireframes, but over time increase fidelity to ultimately become the final deliverable. Bearded Studio in Pittsburgh follow a similar process, where designs start grayscale and layout-less but slowly increase fidelity until the final design is in place.</strong></p>
+<blockquote>
+<p>wireframe: 框架法<br>fidelity: 保真度；精确；尽职；忠诚</p>
+</blockquote>
+<h3 id="pages"><a href="#pages" class="headerlink" title="pages"></a>pages</h3><p><strong>Pages are specific instances of templates. Here, placeholder content is replaced with real representative content to give an accurate depiction of what a user will ultimately see.</strong></p>
+<p><img src="/2019/03/02/Atomic-design/20190302074006953.png" alt></p>
+<p>Pages are the highest level of fidelity and because they’re the most tangible, it’s typically where most people in the process spend most of their time and what most reviews revolve around.</p>
+<p>The page stage is essential as it’s where we test the effectiveness of the design system. Viewing everything in context allows us to loop back to modify our molecules, organisms, and templates to better address the real context of the design.</p>
+<p>Pages are also the place to test variations in templates. For example, you might want to articulate what a headline containing 40 characters looks like, but also demonstrate what 340 characters looks like. What does it look like when a user has one item in their shopping cart versus 10 items with a discount code applied? Again, these specific instances influence how we loop back through and construct our system.</p>
+<h2 id="why-atomic-design"><a href="#why-atomic-design" class="headerlink" title="why atomic design"></a>why atomic design</h2><p>In a lot of ways, this is how we’ve been doing things all along, even if we haven’t been consciously thinking about it in this specific way.</p>
+<p>Atomic design provides a clear methodology for crafting design systems. Clients and team members are able to better appreciate the concept of design systems by actually seeing the steps laid out in front of them.</p>
+<p>Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. <strong>And by assembling rather than deconstructing, we’re crafting a system right out of the gate instead of cherry picking patterns after the fact.</strong></p>
+<blockquote>
+<p>simultaneously: 同时地；并发地<br>right out: 彻底地；坦率的；出来</p>
+</blockquote>
 
       
     </div>
@@ -543,11 +552,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/服务器/" rel="tag"># 服务器</a>
+            <a href="/tags/英语/" rel="tag"># 英语</a>
           
-            <a href="/tags/更新中/" rel="tag"># 更新中</a>
-          
-            <a href="/tags/后端/" rel="tag"># 后端</a>
+            <a href="/tags/翻译/" rel="tag"># 翻译</a>
           
         </div>
       
@@ -560,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/25/Getting-up-moving-forward-and-moving-on/" rel="next" title="Getting_up,moving_forward,and_moving_on.">
-                <i class="fa fa-chevron-left"></i> Getting_up,moving_forward,and_moving_on.
+              <a href="/2019/02/26/重新认识Nginx/" rel="next" title="重新认识Nginx">
+                <i class="fa fa-chevron-left"></i> 重新认识Nginx
               </a>
             
           </div>
@@ -569,10 +576,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/02/Atomic-design/" rel="prev" title="Atomic_design">
-                Atomic_design <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -737,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录规划"><span class="nav-number">1.</span> <span class="nav-text">目录规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先导知识"><span class="nav-number">2.</span> <span class="nav-text">先导知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络体系结构"><span class="nav-number">3.</span> <span class="nav-text">网络体系结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从历史谈起"><span class="nav-number">4.</span> <span class="nav-text">从历史谈起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx的高级应用"><span class="nav-number">5.</span> <span class="nav-text">Nginx的高级应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#atomic-design"><span class="nav-number">1.</span> <span class="nav-text">atomic design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-atomic-design"><span class="nav-number">2.</span> <span class="nav-text">what is atomic design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#atoms"><span class="nav-number">2.1.</span> <span class="nav-text">atoms</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#molecules"><span class="nav-number">2.2.</span> <span class="nav-text">molecules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#organisms"><span class="nav-number">2.3.</span> <span class="nav-text">organisms</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#templates"><span class="nav-number">2.4.</span> <span class="nav-text">templates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pages"><span class="nav-number">2.5.</span> <span class="nav-text">pages</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-atomic-design"><span class="nav-number">3.</span> <span class="nav-text">why atomic design</span></a></li></ol></div>
             
 
           </div>

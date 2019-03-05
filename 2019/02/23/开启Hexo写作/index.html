@@ -40,6 +40,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
 
 
 
@@ -75,7 +79,7 @@
     scheme: 'Gemini',
     version: '7.0.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false,"dimmer":false},
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -105,7 +109,7 @@
 <meta property="og:description" content="Hexo 安装与使用">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://localhost:4000/2019/02/23/开启Hexo写作/20190223043226403.png">
-<meta property="og:updated_time" content="2019-02-23T11:40:44.974Z">
+<meta property="og:updated_time" content="2019-03-05T02:54:45.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开启Hexo写作">
 <meta name="twitter:description" content="Hexo 安装与使用">
@@ -372,12 +376,24 @@
                 
               
 
-              <time title="创建时间：2019-02-23 16:22:52 / 修改时间：19:40:44" itemprop="dateCreated datePublished" datetime="2019-02-23T16:22:52+08:00">2019-02-23</time>
+              <time title="创建时间：2019-02-23 16:22:52" itemprop="dateCreated datePublished" datetime="2019-02-23T16:22:52+08:00">2019-02-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-05 10:54:45" itemprop="dateModified" datetime="2019-03-05T10:54:45+08:00">2019-03-05</time>
               
             
           </span>
@@ -432,14 +448,15 @@
         <h3 id="Hexo-安装与使用"><a href="#Hexo-安装与使用" class="headerlink" title="Hexo 安装与使用"></a>Hexo 安装与使用</h3><p><img src="/2019/02/23/开启Hexo写作/20190223043226403.png" alt></p>
 <a id="more"></a>
 <p>安装和部署方法其它地方都可以找得到，这里不再赘述。</p>
-<h3 id="Next-主题的一些配置"><a href="#Next-主题的一些配置" class="headerlink" title="Next 主题的一些配置"></a>Next 主题的一些配置</h3><p>这些设置可能由于Hexo或者Next的更新而略有不同，这里列出几项比较推荐的设置项，自寻搜索设置。</p>
+<h3 id="Next-主题的一些配置"><a href="#Next-主题的一些配置" class="headerlink" title="Next 主题的一些配置"></a>Next 主题的一些配置</h3><p>这些设置可能由于 Hexo 或者 Next 的更新而略有不同，这里列出几项比较推荐的设置项，自寻搜索设置。</p>
 <ol>
-<li>设置Next主题的显示样式</li>
+<li>设置 Next 主题的显示样式</li>
 <li>开启 <code>分类</code>、<code>标签</code>功能页</li>
 <li>添加头像</li>
 <li>设置浏览进度可见</li>
-<li>配置图片资源<br> <a href="http://www.yuanerhero.top/2018/04/18/Hexo%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_blank" rel="noopener">Hexo 上传的图片在网页上无法显示的解决办法</a></li>
-<li>搭配HexoEditor编辑器</li>
+<li>配置图片资源<br><a href="http://www.yuanerhero.top/2018/04/18/Hexo%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_blank" rel="noopener">Hexo 上传的图片在网页上无法显示的解决办法</a></li>
+<li>搭配 HexoEditor 编辑器</li>
+<li>开启图片预览插件功能(fancybox)</li>
 </ol>
 <h3 id="待添加的功能"><a href="#待添加的功能" class="headerlink" title="待添加的功能"></a>待添加的功能</h3><ol>
 <li>设置版权声明</li>
@@ -562,7 +579,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -587,7 +604,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -628,7 +647,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -758,6 +781,8 @@
 
 
 
+  
+
 
 
 
@@ -780,6 +805,9 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   

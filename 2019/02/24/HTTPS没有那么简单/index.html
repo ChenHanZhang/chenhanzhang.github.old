@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -435,7 +418,7 @@
       
 
       
-        <p><img src="/2019/02/24/HTTPS没有那么简单/20190224023221193.png" alt></p>
+        <meta name="generator" content="Hexo 3.8.0"><p><img src="/2019/02/24/HTTPS没有那么简单/20190224023221193.png" alt></p>
 <p>什么，你的站点还不支持HTTPS？</p>
 <a id="more"></a>
 <h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><ul>
@@ -446,12 +429,12 @@
 <li>查看是否已编译过SSL模块</li>
 </ol>
 <p>要想让 Web 服务器支持 HTTPS ，首先你的服务器肯定要支持 SSL ，所以我们先检查 Nginx 是否支持 SSL ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -V</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -V</span><br></pre></td></tr></tbody></table></figure>
 <p>通过命令显示信息，我们看 configure arguments 中是否有 -with-http_ssl_module 字样，如果像我这样没有的话，你就需要重新编译 Nginx 以支持 SSL 了。</p>
 <ol start="2">
 <li>开启Nginx开机自启</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable nginx.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable nginx.service</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="相关目录"><a href="#相关目录" class="headerlink" title="相关目录"></a>相关目录</h3><p>请记住这些目录，如不存在则建立，可根据自己需要调整。</p>
 <ul>
 <li>Nginx的主配置文件</li>
@@ -476,7 +459,7 @@
 <p><img src="/2019/02/24/HTTPS没有那么简单/20190224022050358.png" alt></p>
 <p>将这两个文件放置至<code>/etc/nginx/snippets/</code>目录下。</p>
 <h3 id="二级域名配置https"><a href="#二级域名配置https" class="headerlink" title="二级域名配置https"></a>二级域名配置https</h3><p>进入Nginx多站点配置文件目录<br><code>/etc/nginx/conf.d/</code>，<br>新建一个子域名的配置文件，具体内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#填写绑定证书的域名</span></span><br><span class="line">    server_name  www.mybjut.cn;</span><br><span class="line">    <span class="comment">#更换为你的站点根目录</span></span><br><span class="line">    root         /var/www/www.mybjut.cn;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#证书名称，需要跟证书文件名一致</span></span><br><span class="line">    ssl_certificate      /etc/nginx/snippets/1_www.mybjut.cn_bundle.crt;</span><br><span class="line">    ssl_certificate_key  /etc/nginx/snippets/2_www.mybjut.cn.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server {</span><br><span class="line">    listen       443 ssl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#填写绑定证书的域名</span></span><br><span class="line">    server_name  www.mybjut.cn;</span><br><span class="line">    <span class="comment">#更换为你的站点根目录</span></span><br><span class="line">    root         /var/www/www.mybjut.cn;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#证书名称，需要跟证书文件名一致</span></span><br><span class="line">    ssl_certificate      /etc/nginx/snippets/1_www.mybjut.cn_bundle.crt;</span><br><span class="line">    ssl_certificate_key  /etc/nginx/snippets/2_www.mybjut.cn.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    location / {</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>之后重启Nginx: <code>systemctl restart nginx</code></p>
 <p><img src="/2019/02/24/HTTPS没有那么简单/20190224022533291.png" alt></p>
 <blockquote>
@@ -698,13 +681,14 @@
             </nav>
           
 
-
-          <div id="music163player" style="margin-top:20px;">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="220" height="220" src="//music.163.com/outchain/player?type=0&id=2526497076&auto=0&height=430"></iframe>
-          </div>
+          
 
           
 
+          
+          <div id="music163player" style="margin-top:20px;">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="220" height="220" src="//music.163.com/outchain/player?type=0&id=2526497076&auto=0&height=220"></iframe>
+          </div>
           
 
           
@@ -753,7 +737,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1002,5 +986,6 @@
   </script>
 
 
-</body>
-</html>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

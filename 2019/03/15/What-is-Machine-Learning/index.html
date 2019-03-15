@@ -1,0 +1,1047 @@
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false,"dimmer":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="You’re interested in Machine Learning and maybe you dabble in it a little.If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:  “So,">
+<meta name="keywords" content="英语,机器学习,教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What-is-Machine-Learning?">
+<meta property="og:url" content="https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/index.html">
+<meta property="og:site_name" content="笑忘书的博客">
+<meta property="og:description" content="You’re interested in Machine Learning and maybe you dabble in it a little.If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:  “So,">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/20190315012225848.png">
+<meta property="og:updated_time" content="2019-03-15T05:23:12.865Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What-is-Machine-Learning?">
+<meta name="twitter:description" content="You’re interested in Machine Learning and maybe you dabble in it a little.If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:  “So,">
+<meta name="twitter:image" content="https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/20190315012225848.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>What-is-Machine-Learning? | 笑忘书的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">笑忘书的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Less is More.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="笑忘书">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="笑忘书的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">What-is-Machine-Learning?
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-15 13:20:13 / 修改时间：13:23:12" itemprop="dateCreated datePublished" datetime="2019-03-15T13:20:13+08:00">2019-03-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <meta name="generator" content="Hexo 3.8.0"><p>You’re interested in Machine Learning and maybe you dabble in it a little.<br>If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:</p>
+<blockquote>
+<p>“<em>So, what is machine learning?</em>“</p>
+</blockquote>
+<p>The goal of this post is to give you a few definitions to think about and a handy one-liner definition that is easy to remember.</p>
+<a id="more"></a>
+<p>We will start out by getting a feeling for the standard definitions of Machine Learning taken from authoritative textbooks in the field. <strong>We’ll finish up by working out a developers definition of machine learning and a handy one-liner that we can use anytime we’re asked: <em>What is Machine Learning?</em></strong></p>
+<blockquote>
+<p><code>dabble</code>: 涉猎；涉足；玩水</p>
+</blockquote>
+<h2 id="Authoritative-Definitions"><a href="#Authoritative-Definitions" class="headerlink" title="Authoritative Definitions"></a>Authoritative Definitions</h2><p>Let’s start out by looking at four textbooks on Machine Learning that are commonly used in university-level courses.</p>
+<p>These are our authoritative definitions and lay our foundation for deeper thought on the subject.</p>
+<p>I chose these four definitions to highlight some useful and varied perspectives on the field. Through experience, we’ll learn that the field really is a mess of methods and choosing a perspective is key to making progress.</p>
+<blockquote>
+<p><code>varied</code>: 多变的；各式各样的；杂色的</p>
+</blockquote>
+<h3 id="Mitchell’s-Machine-Learning"><a href="#Mitchell’s-Machine-Learning" class="headerlink" title="Mitchell’s Machine Learning"></a>Mitchell’s Machine Learning</h3><p>Tom Mitchell in his book <a href="http://www.amazon.com/dp/0070428077?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning</a> provides a definition in the opening line of the preface:</p>
+<blockquote>
+<p>The field of machine learning is concerned with the question of how to construct computer programs that automatically improve with experience.</p>
+<p>机器学习领域涉及如何构建自动改进经验的计算机程序的问题。</p>
+</blockquote>
+<p>I like this short and sweet definition and it is the basis for the developers definition we come up with at the end of the post.</p>
+<p><strong>Note the mention of “<em>computer programs</em>” and the reference to “<em>automated improvement</em>“. <em>Write programs that improve themselves</em>, it’s provocative!</strong></p>
+<p>In his introduction he provides a short formalism that you’ll see much repeated:</p>
+<blockquote>
+<p>A computer program is said to <strong>learn</strong> from experience <em>E</em> with respect to some class of tasks <em>T</em> and performance measure <em>P</em>, if its performance at tasks in <em>T</em>, as measured by <em>P</em>, improves with experience <em>E</em>.</p>
+<p>机器学习是一个计算机程序，它从经验 E 中学习关于某类任务 T 和性能测量 P，能够在 T 中的任务中的性能（由 P 测量）随经验 E 而改善。</p>
+</blockquote>
+<p>Don’t let the definition of terms scare you off, this is a very useful formalism.</p>
+<p>We can use this formalism as a template and put <strong>E</strong>, <strong>T</strong>, and <strong>P</strong> at the top of columns in a table and list out complex problems with less ambiguity. It could be used as a design tool to help us think clearly about what data to collect (<strong>E</strong>), what decisions the software needs to make (<strong>T</strong>) and how we will evaluate its results (<strong>P</strong>). This power is why it is oft repeated as a standard definition. Keep it in your back pocket.</p>
+<blockquote>
+<p><code>formalism</code>: 形式</p>
+<p><code>ambiguity</code>: 模棱两可，歧义性</p>
+<p><code>oft</code>: 经常 </p>
+</blockquote>
+<h3 id="Elements-of-Statistical-Learning"><a href="#Elements-of-Statistical-Learning" class="headerlink" title="Elements of Statistical Learning"></a>Elements of Statistical Learning</h3><p><a href="http://www.amazon.com/dp/0387848576?tag=inspiredalgor-20" target="_blank" rel="noopener">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</a> was written by three Stanford statisticians and self-described as a statistical framework to organize their field of inquiry.</p>
+<blockquote>
+<p><code>inquiry</code>: 调查；询问；询价</p>
+</blockquote>
+<p>In the preface is written:</p>
+<blockquote>
+<p>Vast amounts of data are being generated in many fields, and the statisticians’s job is to make sense of it all: to extract important patterns and trends, and to understand “what the data says”. We call this <em>learning from data.</em></p>
+<p>许多领域正在生成大量数据，统计人员的工作就是理解这一切：提取重要的模式和趋势，并理解 “数据所说的内容”。 我们称之为 <em>从数据中学习</em>。</p>
+</blockquote>
+<p>I understand the job of a statistician is to use the tools of statistics to interpret data in the context of the domain. The authors seem to include all of the field of Machine Learning as aids in that pursuit. Interestingly, they chose to include “<em>Data Mining</em>” in the subtitle of the book.</p>
+<p>Statisticians learn from data, but software does too and we learn from the things that the software learns. From the decisions made and the results achieved by various machine learning methods.</p>
+<h3 id="Pattern-Recognition"><a href="#Pattern-Recognition" class="headerlink" title="Pattern Recognition"></a>Pattern Recognition</h3><p>Bishop in the preface of his book <a href="http://www.amazon.com/dp/0387310738?tag=inspiredalgor-20" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a> comments:</p>
+<blockquote>
+<p>Pattern recognition has its origins in engineering, whereas machine learning grew out of computer science. However, these activities can be viewed as two facets of the same field…</p>
+<p>模式识别起源于工程，而机器学习则源于计算机科学。 但是，这些活动可视为同一领域的两个方面……</p>
+</blockquote>
+<p>Reading this, you get the impression that Bishop came at the field from an engineering perspective and later learned and leveraged the Computer Science take on the same methods. Pattern recognition is an engineering or signal processing term.</p>
+<blockquote>
+<p><code>leveraged</code>: 杠杆</p>
+</blockquote>
+<p>This is a mature approach and one we should emulate. More broadly, regardless of the field that lays claim to a method, if it suits our needs by getting us closer to an insight or a result by “learning from data”, then we can decide to call it machine learning.</p>
+<blockquote>
+<p><code>emulate</code>: 模仿</p>
+</blockquote>
+<h3 id="An-Algorithmic-Perspective"><a href="#An-Algorithmic-Perspective" class="headerlink" title="An Algorithmic Perspective"></a>An Algorithmic Perspective</h3><p>Marsland provides adopts the Mitchell definition of Machine Learning in his book <a href="http://www.amazon.com/dp/B005H6YE18?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning: An Algorithmic Perspective</a>.</p>
+<p>He provides a cogent note in his prologue that motivates his writing the book:</p>
+<blockquote>
+<p>One of the most interesting features of machine learning is that it lies on the boundary of several different academic disciplines, principally computer science, statistics, mathematics, and engineering. …machine learning is usually studied as part of artificial intelligence, which puts it firmly into computer science …understanding why these algorithms work requires a certain amount of statistical and mathematical sophistication that is often missing from computer science undergraduates.</p>
+<p>….. 机器学习通常作为人工智能的一部分进行研究，将其牢牢地植入计算机科学…… 理解为什么这些算法的工作需要一定程度的统计和数学复杂性，而这些都是计算机科学本科生经常缺失的。</p>
+</blockquote>
+<p>This is insightful and instructive.</p>
+<p>Firstly, he underscores the multidisciplinary nature of the field. We were getting a feeling for that from the above definition, but he draws a big red underline for us. Machine Learning draws from all manner of information sciences.</p>
+<p>Secondly, he underscores the danger of sticking to a given perspective too tightly. Specifically, the case of a the algorithmist who shies away from the mathematical inner workings of a method.</p>
+<p>No doubt, the counter case of the statistician that shies away from the practical concerns of implementation and deployment is just as limiting.</p>
+<blockquote>
+<p><code>cogent</code>: 中肯的</p>
+<p><code>prologue</code>: 序言</p>
+<p><code>underscore</code>: 在下面画线；强调</p>
+</blockquote>
+<h3 id="Venn-Diagram"><a href="#Venn-Diagram" class="headerlink" title="Venn Diagram"></a>Venn Diagram</h3><p>Drew Conway <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram" target="_blank" rel="noopener">created a nice Venn Diagram</a> in September 2010 that might help.</p>
+<p>In his explanation, he comments: Machine Learning = Hacking + Math & Statistics</p>
+<p><img src="/2019/03/15/What-is-Machine-Learning/20190315012225848.png" alt="Data Science Venn Diagram"></p>
+<p>Data Science Venn Diagram. Credited to Drew Conway,  Creative Commons licensed as Attribution-NonCommercial.</p>
+<p>He also describes the <em>Danger Zone</em> as <em>Hacking Skills</em> + <em>Expertise</em>.</p>
+<p><strong>Here, he is referring to those people that know enough to be dangerous. They can access and structure data, they know the domain and they can run a method and present results, but don’t understand what the results mean. I think this is what Marsland may have been hinting at.</strong></p>
+<h2 id="Developers-Definition-of-Machine-Learning"><a href="#Developers-Definition-of-Machine-Learning" class="headerlink" title="Developers Definition of Machine Learning"></a>Developers Definition of Machine Learning</h2><p>We now turn to the need to break all of this down to nuts and bolts for us developers.</p>
+<p>We first look at complex problems that resist our decomposition and procedural solutions. This frames the power of machine learning. We then work out a definition that sits well with us developers that we can use whenever we’re asked, “<em>So, What is Machine Learning?</em>” by other developers.</p>
+<h3 id="Complex-Problems"><a href="#Complex-Problems" class="headerlink" title="Complex Problems"></a>Complex Problems</h3><p>As a developer, you will eventually encounter classes of problems that stubbornly resist a logical and procedural solution.</p>
+<p>What I mean is, there are classes of problems where it is not feasible or cost-effective to sit down and write out all the if statements needed to solve the problem.</p>
+<p>“<em>Sacrilege!</em>” I hear your developer’s brain shout.</p>
+<p>It’s true.</p>
+<p>Take the every-day case of the decision problem of discriminating spam email from non-spam email. This is an example used all the time when introducing machine learning. How would you write a program to filter emails as they come into your email account and decide to put them in the spam folder or the inbox folder?</p>
+<p>You’d probably start out by collecting some examples and having a look at them and a deep think about them. You’d look for patterns in the emails that are spam and those that are not. You’d think about abstracting those patterns so that your heuristics would work with new cases in the future. You’d ignore odd emails that will never be seen again. You’d go for easy wins to get your accuracy up and craft special things for the edge cases. You’d review the email frequently over time and think about abstracting new patterns to improve the decision making.</p>
+<p>There’s a machine learning algorithm in there, amongst all that, except it was executed by you the programmer rather than the computer. This manually derived hardcoded system would only be as good as the programmer’s ability to extract rules from the data and implement them in the program.</p>
+<p>It could be done, but it would take a lot of resources and be a maintenance nightmare.</p>
+<h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><p>In the example above, I’m sure your developer brain, that part of your brain that ruthlessly seeks to automate, could see the opportunity for automating and optimizing the meta-process of extracting patterns from examples.</p>
+<p>Machine learning methods are this automated process.</p>
+<p>In our spam/non-spam example, the examples (<strong>E</strong>) are emails we have collected. The task (<strong>T</strong>) was a decision problem (called classification) of marking each email as spam or not, and putting it in the correct folder. Our performance measure (<strong>P</strong>) would be something like accuracy as a percentage (correct decisions divided by total decisions made multiplied by 100) between 0% (worst) and 100% (best).</p>
+<p>Preparing a decision making program like this is typically called training, where collected examples are called the training set and the program is referred to as a model, as in a model of the problem of classifying spam from non-spam. As developers, we like this terminology, a model has state and needs to be persisted, training is a process that is performed once and is maybe rerun as needed, classification is the task performed. It all makes sense to us.</p>
+<p>We can see that some of the terminology used in the above definitions does not sit well for programmers. Technically, all the programs we write are automations, commenting that machine learning automatically learns is not meaningful.</p>
+<h3 id="Handy-One-liner"><a href="#Handy-One-liner" class="headerlink" title="Handy One-liner"></a>Handy One-liner</h3><p>So, let’s see if we can use these pieces and construct a developers definition of machine learning. How about:</p>
+<blockquote>
+<p><strong>Machine Learning is the training of a model from data that generalizes a decision against a performance measure.</strong></p>
+</blockquote>
+<p><em>Training a model</em> suggests training examples. A <em>model</em> suggests state acquired through experience. <em>Generalizes a decision</em> suggests the capability to make a decision based on inputs and anticipating unseen inputs in the future for which a decision will be required. Finally, <em>against a performance measure</em> suggests a targeted need and directed quality to the model being prepared.</p>
+<p>I’m no poet, can you come up with a more accurate or more succinct developers definition of Machine Learning?<br>Share your definition in the comments below.</p>
+<h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><p>I’ve linked to resources throughout this post, but I have listed some useful resources below if you thirst for more reading.</p>
+<h3 id="Books"><a href="#Books" class="headerlink" title="Books"></a>Books</h3><p>The following are the four textbooks from which definitions were drawn.</p>
+<ul>
+<li><a href="http://www.amazon.com/dp/0070428077?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning</a> by Mitchell</li>
+<li><a href="http://www.amazon.com/dp/0387848576?tag=inspiredalgor-20" target="_blank" rel="noopener">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</a> by Hastie, Tibshirani and Friedman</li>
+<li><a href="http://www.amazon.com/dp/0387310738?tag=inspiredalgor-20" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a> by Bishop</li>
+<li><a href="http://www.amazon.com/dp/1420067184?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning: An Algorithmic Perspective</a> by Marsland.</li>
+</ul>
+<p>Also, Drew Conway has a book in collaboration with John Myles White that is practical and fun to read titled [Machine Learning for Hackers](</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/英语/" rel="tag"># 英语</a>
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/06/The-Machine-Learning-Mastery-Method/" rel="next" title="The_Machine_Learning_Mastery_Method">
+                <i class="fa fa-chevron-left"></i> The_Machine_Learning_Mastery_Method
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/logo.png" alt="笑忘书">
+            
+              <p class="site-author-name" itemprop="name">笑忘书</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          <div id="music163player" style="margin-top:20px;">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="220" height="220" src="//music.163.com/outchain/player?type=0&id=2526497076&auto=0&height=220"></iframe>
+          </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Authoritative-Definitions"><span class="nav-number">1.</span> <span class="nav-text">Authoritative Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mitchell’s-Machine-Learning"><span class="nav-number">1.1.</span> <span class="nav-text">Mitchell’s Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elements-of-Statistical-Learning"><span class="nav-number">1.2.</span> <span class="nav-text">Elements of Statistical Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern-Recognition"><span class="nav-number">1.3.</span> <span class="nav-text">Pattern Recognition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#An-Algorithmic-Perspective"><span class="nav-number">1.4.</span> <span class="nav-text">An Algorithmic Perspective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Venn-Diagram"><span class="nav-number">1.5.</span> <span class="nav-text">Venn Diagram</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Developers-Definition-of-Machine-Learning"><span class="nav-number">2.</span> <span class="nav-text">Developers Definition of Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex-Problems"><span class="nav-number">2.1.</span> <span class="nav-text">Complex Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine-Learning"><span class="nav-number">2.2.</span> <span class="nav-text">Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handy-One-liner"><span class="nav-number">2.3.</span> <span class="nav-text">Handy One-liner</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Further-Reading"><span class="nav-number">3.</span> <span class="nav-text">Further Reading</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Books"><span class="nav-number">3.1.</span> <span class="nav-text">Books</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">© <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">笑忘书</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.mybjut.cn/2019/02/23/%E5%BC%80%E5%90%AFHexo%E5%86%99%E4%BD%9C/</loc>
+    
+    <lastmod>2019-03-17T04:53:30.961Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.mybjut.cn/2019/03/17/Practical-machine-learning-problems/</loc>
     
     <lastmod>2019-03-17T02:27:44.067Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://blog.mybjut.cn/2019/03/06/%E4%BB%8EBIOS%E8%B0%88%E8%B5%B7/</loc>
     
     <lastmod>2019-03-15T09:28:08.148Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.mybjut.cn/2019/02/23/%E5%BC%80%E5%90%AFHexo%E5%86%99%E4%BD%9C/</loc>
-    
-    <lastmod>2019-03-15T09:24:19.801Z</lastmod>
     
   </url>
   

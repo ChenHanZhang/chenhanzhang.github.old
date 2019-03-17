@@ -109,7 +109,7 @@
 <meta property="og:description" content="You’re interested in Machine Learning and maybe you dabble in it a little.If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:  “So,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/What-is-Machine-Learning/20190315012225848.png">
-<meta property="og:updated_time" content="2019-03-15T09:26:01.081Z">
+<meta property="og:updated_time" content="2019-03-16T14:02:22.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What-is-Machine-Learning?">
 <meta name="twitter:description" content="You’re interested in Machine Learning and maybe you dabble in it a little.If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:  “So,">
@@ -284,6 +284,23 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-labs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/labs/" rel="section"><i class="menu-item-icon fa fa-fw fa-flask"></i> <br>labs</a>
+
+  </li>
 
       
       
@@ -376,12 +393,24 @@
                 
               
 
-              <time title="创建时间：2019-03-15 13:20:13 / 修改时间：17:26:01" itemprop="dateCreated datePublished" datetime="2019-03-15T13:20:13+08:00">2019-03-15</time>
+              <time title="创建时间：2019-03-15 13:20:13" itemprop="dateCreated datePublished" datetime="2019-03-15T13:20:13+08:00">2019-03-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-16 22:02:22" itemprop="dateModified" datetime="2019-03-16T22:02:22+08:00">2019-03-16</time>
               
             
           </span>
@@ -435,10 +464,11 @@
       
         <p>You’re interested in Machine Learning and maybe you dabble in it a little.<br>If you talk about Machine Learning with a friend or colleague one day, you run the risk of someone actually asking you:</p>
 <blockquote>
-<p>“<em>So, what is machine learning?</em>“</p>
+<p>“<em>So, what is machine learning?</em>”</p>
 </blockquote>
 <p>The goal of this post is to give you a few definitions to think about and a handy one-liner definition that is easy to remember.</p>
 <a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习一项新的技术、涉入一个新的领域，第一步需要对其概念有个清晰明确的定义，在这个基础上再深入挖掘。在这篇文章中作者尝试给定几种机器学习的定义。理解这些定义，从不同领域专家的视角来看待机器学习，对接下来的学习大有裨益。</p>
 <p>We will start out by getting a feeling for the standard definitions of Machine Learning taken from authoritative textbooks in the field. <strong>We’ll finish up by working out a developers definition of machine learning and a handy one-liner that we can use anytime we’re asked: <em>What is Machine Learning?</em></strong></p>
 <blockquote>
 <p><code>dabble</code>: 涉猎；涉足；玩水</p>
@@ -458,7 +488,7 @@
 <p><strong>Note the mention of “<em>computer programs</em>” and the reference to “<em>automated improvement</em>“. <em>Write programs that improve themselves</em>, it’s provocative!</strong></p>
 <p>In his introduction he provides a short formalism that you’ll see much repeated:</p>
 <blockquote>
-<p>A computer program is said to <strong>learn</strong> from experience <em>E</em> with respect to some class of tasks <em>T</em> and performance measure <em>P</em>, if its performance at tasks in <em>T</em>, as measured by <em>P</em>, improves with experience <em>E</em>.</p>
+<p>A computer program is said to <strong>learn</strong> from experience _E_ with respect to some class of tasks _T_ and performance measure _P_, if its performance at tasks in _T_, as measured by _P_, improves with experience _E_.</p>
 <p>机器学习是一个计算机程序，它从经验 E 中学习关于某类任务 T 和性能测量 P，能够在 T 中的任务中的性能（由 P 测量）随经验 E 而改善。</p>
 </blockquote>
 <p>Don’t let the definition of terms scare you off, this is a very useful formalism.</p>
@@ -466,7 +496,7 @@
 <blockquote>
 <p><code>formalism</code>: 形式</p>
 <p><code>ambiguity</code>: 模棱两可，歧义性</p>
-<p><code>oft</code>: 经常 </p>
+<p><code>oft</code>: 经常</p>
 </blockquote>
 <h3 id="Elements-of-Statistical-Learning"><a href="#Elements-of-Statistical-Learning" class="headerlink" title="Elements of Statistical Learning"></a>Elements of Statistical Learning</h3><p><a href="http://www.amazon.com/dp/0387848576?tag=inspiredalgor-20" target="_blank" rel="noopener">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</a> was written by three Stanford statisticians and self-described as a statistical framework to organize their field of inquiry.</p>
 <blockquote>
@@ -510,23 +540,50 @@
 <h3 id="Venn-Diagram"><a href="#Venn-Diagram" class="headerlink" title="Venn Diagram"></a>Venn Diagram</h3><p>Drew Conway <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram" target="_blank" rel="noopener">created a nice Venn Diagram</a> in September 2010 that might help.</p>
 <p>In his explanation, he comments: Machine Learning = Hacking + Math &amp; Statistics</p>
 <p><img src="http://poe5j6ijp.bkt.clouddn.com/What-is-Machine-Learning/20190315012225848.png" alt="Data Science Venn Diagram"></p>
-<p>Data Science Venn Diagram. Credited to Drew Conway,  Creative Commons licensed as Attribution-NonCommercial.</p>
+<p>Data Science Venn Diagram. Credited to Drew Conway, Creative Commons licensed as Attribution-NonCommercial.</p>
 <p>He also describes the <em>Danger Zone</em> as <em>Hacking Skills</em> + <em>Expertise</em>.</p>
 <p><strong>Here, he is referring to those people that know enough to be dangerous. They can access and structure data, they know the domain and they can run a method and present results, but don’t understand what the results mean. I think this is what Marsland may have been hinting at.</strong></p>
+<blockquote>
+<p>在这里，他指的是那些“危险”的人。这类研究者可以获取和构建数据，他们对这个领域有一定的了解，他们可以构建运行方法并显示结果，但不了解结果的含义。我认为这是 Marsland 可能暗示的。<br>注： 具备编程能力和实践经验，但是缺乏数学和统计学方法理论，这类研究者在学习机器学习的时候容易陷入误区。如果研究脱离了理论基础，只懂得如何实现，那么就不是在学习机器学习，而仅仅是对现有的机器学习工具的一种应用。</p>
+</blockquote>
 <h2 id="Developers-Definition-of-Machine-Learning"><a href="#Developers-Definition-of-Machine-Learning" class="headerlink" title="Developers Definition of Machine Learning"></a>Developers Definition of Machine Learning</h2><p>We now turn to the need to break all of this down to nuts and bolts for us developers.</p>
+<blockquote>
+<p><code>nuts</code>: 怪人；疯狂的，执着于某事的<br><code>bolt</code>: 逃离；匆匆咽下；突然地；猛冲</p>
+</blockquote>
 <p>We first look at complex problems that resist our decomposition and procedural solutions. This frames the power of machine learning. We then work out a definition that sits well with us developers that we can use whenever we’re asked, “<em>So, What is Machine Learning?</em>” by other developers.</p>
 <h3 id="Complex-Problems"><a href="#Complex-Problems" class="headerlink" title="Complex Problems"></a>Complex Problems</h3><p>As a developer, you will eventually encounter classes of problems that stubbornly resist a logical and procedural solution.</p>
+<blockquote>
+<p><code>stubbornly</code>: 顽固地</p>
+</blockquote>
 <p>What I mean is, there are classes of problems where it is not feasible or cost-effective to sit down and write out all the if statements needed to solve the problem.</p>
 <p>“<em>Sacrilege!</em>” I hear your developer’s brain shout.</p>
 <p>It’s true.</p>
 <p>Take the every-day case of the decision problem of discriminating spam email from non-spam email. This is an example used all the time when introducing machine learning. How would you write a program to filter emails as they come into your email account and decide to put them in the spam folder or the inbox folder?</p>
+<blockquote>
+<p><code>spam email</code>: 垃圾邮件</p>
+</blockquote>
 <p>You’d probably start out by collecting some examples and having a look at them and a deep think about them. You’d look for patterns in the emails that are spam and those that are not. You’d think about abstracting those patterns so that your heuristics would work with new cases in the future. You’d ignore odd emails that will never be seen again. You’d go for easy wins to get your accuracy up and craft special things for the edge cases. You’d review the email frequently over time and think about abstracting new patterns to improve the decision making.</p>
+<blockquote>
+<p><code>heuristics</code>: 启发</p>
+</blockquote>
 <p>There’s a machine learning algorithm in there, amongst all that, except it was executed by you the programmer rather than the computer. This manually derived hardcoded system would only be as good as the programmer’s ability to extract rules from the data and implement them in the program.</p>
+<blockquote>
+<p><code>amongst</code>: 在…其中</p>
+</blockquote>
 <p>It could be done, but it would take a lot of resources and be a maintenance nightmare.</p>
+<blockquote>
+<p><code>nightmare</code>: 噩梦</p>
+</blockquote>
 <h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><p>In the example above, I’m sure your developer brain, that part of your brain that ruthlessly seeks to automate, could see the opportunity for automating and optimizing the meta-process of extracting patterns from examples.</p>
+<blockquote>
+<p><code>ruthlessly</code>: 无情地</p>
+</blockquote>
 <p>Machine learning methods are this automated process.</p>
 <p>In our spam/non-spam example, the examples (<strong>E</strong>) are emails we have collected. The task (<strong>T</strong>) was a decision problem (called classification) of marking each email as spam or not, and putting it in the correct folder. Our performance measure (<strong>P</strong>) would be something like accuracy as a percentage (correct decisions divided by total decisions made multiplied by 100) between 0% (worst) and 100% (best).</p>
 <p>Preparing a decision making program like this is typically called training, where collected examples are called the training set and the program is referred to as a model, as in a model of the problem of classifying spam from non-spam. As developers, we like this terminology, a model has state and needs to be persisted, training is a process that is performed once and is maybe rerun as needed, classification is the task performed. It all makes sense to us.</p>
+<blockquote>
+<p><code>terminology</code>: 专业用语；术语</p>
+</blockquote>
 <p>We can see that some of the terminology used in the above definitions does not sit well for programmers. Technically, all the programs we write are automations, commenting that machine learning automatically learns is not meaningful.</p>
 <h3 id="Handy-One-liner"><a href="#Handy-One-liner" class="headerlink" title="Handy One-liner"></a>Handy One-liner</h3><p>So, let’s see if we can use these pieces and construct a developers definition of machine learning. How about:</p>
 <blockquote>
@@ -542,7 +599,7 @@
 <li><a href="http://www.amazon.com/dp/0387310738?tag=inspiredalgor-20" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a> by Bishop</li>
 <li><a href="http://www.amazon.com/dp/1420067184?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning: An Algorithmic Perspective</a> by Marsland.</li>
 </ul>
-<p>Also, Drew Conway has a book in collaboration with John Myles White that is practical and fun to read titled [Machine Learning for Hackers](</p>
+<p>Also, Drew Conway has a book in collaboration with John Myles White that is practical and fun to read titled <a href="http://www.amazon.com/dp/1449303714?tag=inspiredalgor-20" target="_blank" rel="noopener">Machine Learning for Hackers</a></p>
 
       
     </div>
@@ -592,6 +649,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/17/Practical-machine-learning-problems/" rel="prev" title="Practical-machine-learning-problems">
+                Practical-machine-learning-problems <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -662,7 +723,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -788,7 +849,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Authoritative-Definitions"><span class="nav-number">1.</span> <span class="nav-text">Authoritative Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mitchell’s-Machine-Learning"><span class="nav-number">1.1.</span> <span class="nav-text">Mitchell’s Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elements-of-Statistical-Learning"><span class="nav-number">1.2.</span> <span class="nav-text">Elements of Statistical Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern-Recognition"><span class="nav-number">1.3.</span> <span class="nav-text">Pattern Recognition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#An-Algorithmic-Perspective"><span class="nav-number">1.4.</span> <span class="nav-text">An Algorithmic Perspective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Venn-Diagram"><span class="nav-number">1.5.</span> <span class="nav-text">Venn Diagram</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Developers-Definition-of-Machine-Learning"><span class="nav-number">2.</span> <span class="nav-text">Developers Definition of Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex-Problems"><span class="nav-number">2.1.</span> <span class="nav-text">Complex Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine-Learning"><span class="nav-number">2.2.</span> <span class="nav-text">Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handy-One-liner"><span class="nav-number">2.3.</span> <span class="nav-text">Handy One-liner</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Further-Reading"><span class="nav-number">3.</span> <span class="nav-text">Further Reading</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Books"><span class="nav-number">3.1.</span> <span class="nav-text">Books</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authoritative-Definitions"><span class="nav-number">2.</span> <span class="nav-text">Authoritative Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mitchell’s-Machine-Learning"><span class="nav-number">2.1.</span> <span class="nav-text">Mitchell’s Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elements-of-Statistical-Learning"><span class="nav-number">2.2.</span> <span class="nav-text">Elements of Statistical Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern-Recognition"><span class="nav-number">2.3.</span> <span class="nav-text">Pattern Recognition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#An-Algorithmic-Perspective"><span class="nav-number">2.4.</span> <span class="nav-text">An Algorithmic Perspective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Venn-Diagram"><span class="nav-number">2.5.</span> <span class="nav-text">Venn Diagram</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Developers-Definition-of-Machine-Learning"><span class="nav-number">3.</span> <span class="nav-text">Developers Definition of Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex-Problems"><span class="nav-number">3.1.</span> <span class="nav-text">Complex Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine-Learning"><span class="nav-number">3.2.</span> <span class="nav-text">Machine Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handy-One-liner"><span class="nav-number">3.3.</span> <span class="nav-text">Handy One-liner</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Further-Reading"><span class="nav-number">4.</span> <span class="nav-text">Further Reading</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Books"><span class="nav-number">4.1.</span> <span class="nav-text">Books</span></a></li></ol></li></ol></div>
             
 
           </div>

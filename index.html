@@ -373,6 +373,250 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.mybjut.cn/2019/03/18/Machine-Learning-Matters/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="笑忘书">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="笑忘书的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/18/Machine-Learning-Matters/" class="post-title-link" itemprop="url">Machine-Learning-Matters</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-18 23:51:14" itemprop="dateCreated datePublished" datetime="2019-03-18T23:51:14+08:00">2019-03-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-19 10:09:17" itemprop="dateModified" datetime="2019-03-19T10:09:17+08:00">2019-03-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>It is important to know why machine learning matters so that you know the intrinsic value of the field and of methods and open questions in the field.</p>
+<blockquote>
+<p><code>intrinsic</code>: 本质的；固有的；本身的</p>
+</blockquote>
+<p>Like knowing your why, knowing the value of the field can be used as a powerful filter of information and help you focus on those methods that actually deliver on the promise that the field makes.</p>
+<blockquote>
+<p><del>就像知道你的原因一样，了解该领域的价值可以作为一个强大的信息过滤器，并帮助你专注于那些真正实现该领域承诺的方法。</del></p>
+<p>如果你知其根本，了解该领域的价值可以作为一个强大的信息过滤器，并帮助你专注于那些真正兑现该领域所(承诺)致力的方法。</p>
+<p><code>deliver on</code>: 兑现</p>
+</blockquote>
+<p>In this post you will learn that machine learning matters because it provides methods that can create solutions to <a href="http://machinelearningmastery.com/practical-machine-learning-problems-real-world-examples-and-discover-how-to-identify-common-classes-of-machine-learning-problems/" target="_blank" rel="noopener">complex problems</a>. You will discover that there are problems for which it is not feasible to manually specify how a program solves a problem.</p>
+<p><strong>The promise that machine learning makes is that it provides tools to generate a solution to complex problems, faster, more accurately and more scalable than we could program a solution manually.</strong></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>知道机器学习的重要性以及原因，有助于你在后续学习过程中专注于该领域真正所关心的、要去实现的目标。作者一开始给出其与传统程序的主要区别，以此引出机器学习重要的原因。</p>
+<h2 id="Complex-Problems"><a href="#Complex-Problems" class="headerlink" title="Complex Problems"></a>Complex Problems</h2><p>Writing programs in a computer can be summarized as automating procedures on input data to create output artifacts. Almost always, they are linear, procedural and logical. A traditional program is written in a programming language to some specification, and it has properties like:</p>
+<ul>
+<li>You know or can control the inputs to the program</li>
+<li>You can specify how the program will achieve its goal</li>
+<li>You can map out what decisions the program will make and under what conditions it makes them</li>
+<li>You can test your program and be confident that because the inputs and outputs are known and all conditions have been exercised the program will achieve its goal</li>
+</ul>
+<p>There are some problems that you can represent in a computer that you cannot write a traditional program to solve. They resist a procedural and logical solution. They have properties such as:</p>
+<ul>
+<li>The scope of all possible inputs is not known beforehand</li>
+<li>You cannot specify how to achieve the goal of the program, only what that goal is</li>
+<li>You cannot map out all the decisions the program will need to make to achieve its goal</li>
+<li>You can collect sample input data for the program</li>
+</ul>
+<p>Problems like this resist traditional programmed solutions because manually specifying a solution would require a disproportionate amount of resources.</p>
+<blockquote>
+<p><code>artifact</code>: 手工艺品；人工制品</p>
+<p><code>specification</code>: 规格说明</p>
+<p><code>disproportionate</code>: 不成比例；与之不匹配</p>
+</blockquote>
+<p>You are probably a programmer, and you might be an experienced programmer. This might sound very odd, even unbelievable. As programmers, we believe as long as we can define what a program needs to do, we are confident we can define how a program can achieve that goal. This is not always the case.</p>
+<h2 id="Spam-Filter-Example"><a href="#Spam-Filter-Example" class="headerlink" title="Spam Filter Example"></a>Spam Filter Example</h2><p>An example of an every-day decision problem that resists a manually defined solution is the discrimination of spam email from non-spam email.</p>
+<p>How would you write a program to filter emails as they come into your email account and decide whether to put them in the spam folder or the inbox folder?</p>
+<p>Some of my thoughts on how to do this are:</p>
+<ul>
+<li>I’d collect examples of emails I knew to be spam or not-spam</li>
+<li>I’d read the emails I had collected and write down any patterns I saw in either group</li>
+<li>I’d think about abstracting those patterns into more general rules I could program</li>
+<li>I’d look for emails that I could safely and quickly categorize as either spam or non-spam</li>
+<li>I’d write tests for my program to ensure it was making accurate decisions</li>
+<li>I’d monitor the deployed system and keep an eye on the decisions it was making</li>
+</ul>
+<p>I could write a program to do this, and so could you. It would take a lot of time. A lot of emails would have to be read. The problem would need to be thought about very deeply. It would take a lot of development and testing time before the system could be trusted enough to be put into operations. Once in operations, there would be so many hard coded rules that were specific to the email I had read that it would be a maintenance nightmare.</p>
+<p>The process above also describes a machine learning solution to the problem of discriminating spam email from non-spam email. The punch line is that machine learning methods can automate the process for you.</p>
+<blockquote>
+<p>用一句话说就是，机器学习方法可以为你你自动化流程。</p>
+</blockquote>
+<p><strong>Pro Tip</strong>: Approaching complex problems in this way is an incredibly valuable skill that will serve you well later on in preparing data and selecting the right machine learning method. Thinking through the process of “how would I manually write a program to solve this” is a master skill that is often overlooked and forgotten by professionals.</p>
+<blockquote>
+<p><strong>专业提示</strong>：以这种方式处理复杂问题是一项非常有价值的技能，可以在以后为您准备数据和选择正确的机器学习方法。通过 “如何手动编写程序来解决这个问题” 的过程进行思考是一项经常被专业人士忽视和遗忘的掌握技巧。</p>
+</blockquote>
+<h2 id="Machine-Learning-Matters"><a href="#Machine-Learning-Matters" class="headerlink" title="Machine Learning Matters"></a>Machine Learning Matters</h2><p>The field of machine learning provides tools to automatically make decisions from data in order to achieve some goal or requirement. The research questions focus on how to do this better and what the results mean.</p>
+<p>Let us focus on the practical problem-solving capabilities of the tools and practices of machine learning. These tools and practices of machine learning matter to the world. Four reasons that they matter are:</p>
+<ul>
+<li><strong>Automatically</strong>: Machine learning methods are automated processes (algorithms) that create algorithms. The methods run on data and produce a model that specifies how to achieve the program’s goal.</li>
+<li><strong>Fast</strong>: Machine learning methods save you time. The methods can analyze sample input data and deliver a program faster than you could manually write one.</li>
+<li><strong>Accurate</strong>: Machine learning methods can do a better job than you. As automated methods, they can run longer on more data than you in order to make more accurate decisions.</li>
+<li><strong>Scale</strong>: Machine learning methods can provide solutions to problems that you cannot solve. The methods can scale and be interconnected to achieve solutions to problems that previously could not be considered or even conceived.</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>自动</strong>：机器学习方法是创建算法的自动化过程（算法）。这些方法在数据上运行并生成一个模型，指定如何实现程序的目标。</li>
+<li><strong>快速</strong>：机器学习方法可以节省您的时间。这些方法可以分析样本输入数据并提供比手动编写程序更快的程序。</li>
+<li><strong>准确</strong>：机器学习方法可以比你做得更好。作为自动化方法，他们可以在比您更多的数据上运行更长时间，以便做出更准确的决策。</li>
+<li><strong>规模</strong>：机器学习方法可以为您无法解决的问题提供解决方案。这些方法可以扩展和互连，以实现以前无法考虑或甚至构思的问题的解决方案。</li>
+</ul>
+</blockquote>
+<p>In this post you learned that machine learning matters because it provides methods that can create solutions to complex problems. Specifically, these are problems that resist a manually specified solution.</p>
+<p>You learned that the promise of machine learning is that it can solve these types of problems automatically, faster and more accurately than a manually specified solution and at a larger scale.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://blog.mybjut.cn/2019/03/17/Practical-machine-learning-problems/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -418,12 +662,24 @@
                 
               
 
-              <time title="创建时间：2019-03-17 10:25:17 / 修改时间：10:27:44" itemprop="dateCreated datePublished" datetime="2019-03-17T10:25:17+08:00">2019-03-17</time>
+              <time title="创建时间：2019-03-17 10:25:17" itemprop="dateCreated datePublished" datetime="2019-03-17T10:25:17+08:00">2019-03-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-19 10:08:24" itemprop="dateModified" datetime="2019-03-19T10:08:24+08:00">2019-03-19</time>
               
             
           </span>
@@ -602,7 +858,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-16 22:02:22" itemprop="dateModified" datetime="2019-03-16T22:02:22+08:00">2019-03-16</time>
+                <time title="修改时间：2019-03-19 10:06:45" itemprop="dateModified" datetime="2019-03-19T10:06:45+08:00">2019-03-19</time>
               
             
           </span>
@@ -785,7 +1041,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-16 22:04:07" itemprop="dateModified" datetime="2019-03-16T22:04:07+08:00">2019-03-16</time>
+                <time title="修改时间：2019-03-19 10:06:11" itemprop="dateModified" datetime="2019-03-19T10:06:11+08:00">2019-03-19</time>
               
             
           </span>
@@ -1979,183 +2235,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.mybjut.cn/2019/02/25/常用英语单词总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="笑忘书">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="笑忘书的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/25/常用英语单词总结/" class="post-title-link" itemprop="url">常用英语单词总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-25 10:54:00 / 修改时间：22:54:05" itemprop="dateCreated datePublished" datetime="2019-02-25T10:54:00+08:00">2019-02-25</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/英语/" itemprop="url" rel="index"><span itemprop="name">英语</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.zhihu.com/question/45645008" target="_blank" rel="noopener">英语十二月份的由来</a></li>
-</ul>
-<h2 id="月份"><a href="#月份" class="headerlink" title="月份"></a>月份</h2><ol>
-<li>January 一月</li>
-</ol>
-<p>来源： 罗马神话中的双面门神(Janus)，一面回顾过往，一面展望未来。</p>
-<ol start="2">
-<li>February 二月</li>
-</ol>
-<p>来源： 来自拉丁文 februarius mensis “净化月”，februare “净化”。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/25/常用英语单词总结/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2204,7 +2283,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.mybjut.cn/2019/03/18/Machine-Learning-Matters/</loc>
+    
+    <lastmod>2019-03-19T02:09:17.923Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.mybjut.cn/2019/03/17/Practical-machine-learning-problems/</loc>
+    
+    <lastmod>2019-03-19T02:08:24.693Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/</loc>
+    
+    <lastmod>2019-03-19T02:06:45.771Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.mybjut.cn/2019/03/06/The-Machine-Learning-Mastery-Method/</loc>
+    
+    <lastmod>2019-03-19T02:06:11.681Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.mybjut.cn/2019/02/23/%E5%BC%80%E5%90%AFHexo%E5%86%99%E4%BD%9C/</loc>
     
-    <lastmod>2019-03-17T07:15:26.533Z</lastmod>
+    <lastmod>2019-03-17T07:18:05.867Z</lastmod>
     
   </url>
   
@@ -12,27 +40,6 @@
     <loc>https://blog.mybjut.cn//404.html</loc>
     
     <lastmod>2019-03-17T07:10:37.181Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.mybjut.cn/2019/03/17/Practical-machine-learning-problems/</loc>
-    
-    <lastmod>2019-03-17T02:27:44.067Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.mybjut.cn/2019/03/06/The-Machine-Learning-Mastery-Method/</loc>
-    
-    <lastmod>2019-03-16T14:04:07.739Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/</loc>
-    
-    <lastmod>2019-03-16T14:02:22.722Z</lastmod>
     
   </url>
   

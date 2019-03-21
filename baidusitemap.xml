@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.mybjut.cn/2019/03/18/Machine-Learning-Matters/</loc>
-    <lastmod>2019-03-19</lastmod>
+    <loc>https://blog.mybjut.cn/2019/03/21/Gentle-Introduction-to-Predictive-Modeling/</loc>
+    <lastmod>2019-03-21</lastmod>
   </url>  <url>
     <loc>https://blog.mybjut.cn/2019/03/17/Practical-machine-learning-problems/</loc>
     <lastmod>2019-03-19</lastmod>
   </url>  <url>
     <loc>https://blog.mybjut.cn/2019/03/15/What-is-Machine-Learning/</loc>
+    <lastmod>2019-03-19</lastmod>
+  </url>  <url>
+    <loc>https://blog.mybjut.cn/2019/03/18/Machine-Learning-Matters/</loc>
     <lastmod>2019-03-19</lastmod>
   </url>  <url>
     <loc>https://blog.mybjut.cn/2019/03/06/The-Machine-Learning-Mastery-Method/</loc>

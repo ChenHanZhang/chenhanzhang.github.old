@@ -59,9 +59,9 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>英语</tag>
         <tag>机器学习</tag>
         <tag>教程</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -124,8 +124,8 @@
         <category>设计原则</category>
       </categories>
       <tags>
-        <tag>英语</tag>
         <tag>翻译</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -215,7 +215,7 @@
   <entry>
     <title><![CDATA[开启Hexo写作]]></title>
     <url>%2F2019%2F02%2F23%2F%E5%BC%80%E5%90%AFHexo%E5%86%99%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[Hexo 安装与使用 安装和部署方法其它地方都可以找得到，这里不再赘述。 Next 主题的一些配置这些设置可能由于 Hexo 或者 Next 的更新而略有不同，这里列出几项比较推荐的设置项，自寻搜索设置。 设置 Next 主题的显示样式 开启 分类、标签功能页 添加头像 设置浏览进度可见 配置图片资源Hexo 上传的图片在网页上无法显示的解决办法 搭配 HexoEditor 编辑器 开启图片预览插件功能(fancybox) 123# 在 next主题目录下执行：git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancyboxrm -rf themes/next6/source/lib/fancybox/.git 添加网易云音乐插件 添加图片懒加载功能 启用 CDN 服务(图片以及 js 文件) 腾讯 404 公益页面 开启本地搜索功能(local_search) 测试页面嵌入音乐 1&#123;% iframe //music.163.com/outchain/player?type=0&amp;id=827122421&amp;auto=0&amp;height=430 330 330 %&#125; 待添加的功能 设置版权声明 评论功能接入]]></content>
+    <content type="text"><![CDATA[Hexo 安装与使用 安装和部署方法其它地方都可以找得到，这里不再赘述。 Next 主题的一些配置这些设置可能由于 Hexo 或者 Next 的更新而略有不同，这里列出几项比较推荐的设置项，自寻搜索设置。 设置 Next 主题的显示样式 开启 分类、标签功能页 添加头像 设置浏览进度可见 配置图片资源Hexo 上传的图片在网页上无法显示的解决办法 搭配 HexoEditor 编辑器 开启图片预览插件功能(fancybox) 123# 在 next主题目录下执行：git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancyboxrm -rf themes/next6/source/lib/fancybox/.git 添加网易云音乐插件 添加图片懒加载功能 启用 CDN 服务(图片以及 js 文件) 腾讯 404 公益页面 开启本地搜索功能(local_search) 页面嵌入音乐 1&#123;% iframe //music.163.com/outchain/player?type=0&amp;id=827122421&amp;auto=0&amp;height=430 330 330 %&#125; 修复 ios 下菜单栏选项需要点击两次才能跳转问题12345678910111213141516 /// 在 `themes\next\layout\_layout.swig`下添加代码 ... &#123;% include '_third-party/copy-code.swig' %&#125; &#123;# Fixed menu touch event on iOS #&#125; &lt;script&gt; document.body.addEventListener('touchstart', function()&#123; &#125;); $('nav a').on('click touchend', function(e) &#123; var el = $(this); var link = el.attr('href'); window.location = link; &#125;); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 待添加的功能 设置版权声明 评论功能接入]]></content>
       <categories>
         <category>自我提升</category>
       </categories>

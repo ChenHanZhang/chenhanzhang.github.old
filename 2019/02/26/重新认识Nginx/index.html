@@ -108,17 +108,17 @@
 <meta property="og:site_name" content="笑忘书的博客">
 <meta property="og:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301121239539.png">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190226101538529.png">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190228115915389.png">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190228115937440.png">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301120331971.png">
-<meta property="og:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301120830174.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301121239539.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190226101538529.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190228115915389.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190228115937440.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301120331971.png">
+<meta property="og:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301120830174.png">
 <meta property="og:updated_time" content="2019-03-15T09:42:04.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重新认识Nginx">
 <meta name="twitter:description" content="对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！  粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。">
-<meta name="twitter:image" content="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301121239539.png">
+<meta name="twitter:image" content="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301121239539.png">
 
 
 
@@ -497,7 +497,7 @@
 
       
         <p>对于接触过后端开发的程序员而言，Nginx不是陌生的。之前在公司中使用lnmp的后台开发环境，虽说是接触过Nginx的，但是委实了解不多。考研期间将操作系统、计算机网络等课程重拾之后，再回来看后台开发这件事，温故知新，快哉！</p>
-<p><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301121239539.png" alt></p>
+<p><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301121239539.png" alt></p>
 <p>粗浅地重新回顾一下后台开发的一些相关技术，想来从Nginx开始下手，这文章既作总结，又当给他人参考。</p>
 <a id="more"></a>
 <h2 id="目录规划"><a href="#目录规划" class="headerlink" title="目录规划"></a>目录规划</h2><ul>
@@ -511,7 +511,7 @@
 <li><a href="https://blog.51cto.com/12889016/2103183" target="_blank" rel="noopener">web 服务器，应用程序服务器，http 服务器的区别</a></li>
 </ul>
 <h2 id="网络体系结构"><a href="#网络体系结构" class="headerlink" title="网络体系结构"></a>网络体系结构</h2><p>先来回顾一下计算机网络体系结构，这个图很重要。</p>
-<p><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190226101538529.png" alt="网络体系结构"></p>
+<p><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190226101538529.png" alt="网络体系结构"></p>
 <blockquote>
 <p>图片来源：腾讯云社区 [1]</p>
 </blockquote>
@@ -538,19 +538,19 @@
 <h2 id="从历史谈起"><a href="#从历史谈起" class="headerlink" title="从历史谈起"></a>从历史谈起</h2><p>要解释清楚Nginx到底都提供了什么服务，一两句话很难说清楚。让我们先回顾一下互联网技术的发展历程，这里可以参考<a href="http://blog.jobbole.com/45169/" target="_blank" rel="noopener">Web 开发的发展史</a>，<a href="https://www.tianmaying.com/blog/8ab3eda84daf4e54014daf68ff09000b" target="_blank" rel="noopener">Web 开发技术发展历史</a>。<br>在了解了web技术是如何一步一步地发展、互联网的技术体系怎么逐渐壮大的之后，Nginx不再仅仅是作为http服务器</p>
 <p>这里延伸一下，既然应用层的大部分服务由Nginx提供，那么我们写的后端服务在应用层上是如何配合Nginx的？<br>从上面的文章中我们可以知道，这主要有几种方式：</p>
 <ol>
-<li>静态资源访问<br><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190228115915389.png" alt><blockquote>
+<li>静态资源访问<br><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190228115915389.png" alt><blockquote>
 <p>图片来源： 《Web 开发技术发展历史》[9]</p>
 </blockquote>
 </li>
-<li>动态资源cgi<br>CGI 定义了 Web 服务器与外部应用程序之间的通信接口标准，因此 Web 服务器可以通过 CGI 执行外部程序，让外部程序根据 Web 请求内容生成动态的内容。这里可以参考一下，<a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a>。<br><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190228115937440.png" alt><blockquote>
+<li>动态资源cgi<br>CGI 定义了 Web 服务器与外部应用程序之间的通信接口标准，因此 Web 服务器可以通过 CGI 执行外部程序，让外部程序根据 Web 请求内容生成动态的内容。这里可以参考一下，<a href="http://haiyangxu.github.io/posts/2014/2014-05-11-How_web_works_HTTP_and_CGI.html#title26" target="_blank" rel="noopener">Web 是如何运行的: HTTP 和 CGI</a>。<br><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190228115937440.png" alt><blockquote>
 <p>图片来源： 《Web 开发技术发展历史》[9]<br>网关协议（cgi , fastcgi 等），的作用，就是把 web 服务器抽出来，分离 “应用”。<br>因为在各个语言上，实现 cgi 或 fastcgi ，要比实现一套完整的 http 要容易得多（最重要的一点是不用关心访问的 “调度” 了）。进一步说， Python 中的 Tornado 虽然自己有实现 http ，正式环境部署的时候，也会在前端部署 nginx ，从这里也可以看到， nginx 这类 web 服务器，除了实现 http 协议，还有其它相关的功能（反向代理，负载均衡，fastcgi 支持，uwsgi 支持等）。而通过通用的网关协议，把这些层分开，各自就可以更关注自己的领域，实现更稳定，强大的服务质量 [5]。</p>
 </blockquote>
 </li>
-<li>脚本语言支持<br><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301120331971.png" alt><blockquote>
+<li>脚本语言支持<br><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301120331971.png" alt><blockquote>
 <p>图片来源： 《Web 开发技术发展历史》[9]</p>
 </blockquote>
 </li>
-<li>反向代理服务器\API网关<br><img src="http://poe5j6ijp.bkt.clouddn.com/重新认识Nginx/20190301120830174.png" alt><br>作为领先的高性能、轻量级反向代理和负载均衡器解决方案，NGINX Plus 具有处理 API 流量所需的高级 HTTP 处理能力。这使得 NGINX Plus 成为构建 API 网关的理想平台。这里可以参考，<a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a> [10]。</li>
+<li>反向代理服务器\API网关<br><img src="https://chenhanzhang.github.io/2019/02/26/重新认识Nginx/20190301120830174.png" alt><br>作为领先的高性能、轻量级反向代理和负载均衡器解决方案，NGINX Plus 具有处理 API 流量所需的高级 HTTP 处理能力。这使得 NGINX Plus 成为构建 API 网关的理想平台。这里可以参考，<a href="https://juejin.im/post/5b2c611ff265da59615c0492" target="_blank" rel="noopener">八步部署 NGINX Plus API 网关</a> [10]。</li>
 </ol>
 <h2 id="Nginx的高级应用"><a href="#Nginx的高级应用" class="headerlink" title="Nginx的高级应用"></a>Nginx的高级应用</h2><p>这部分内容我还不是很熟悉，后面有机会实践之后再做整理。以下是部分参考资料：</p>
 <ol>
